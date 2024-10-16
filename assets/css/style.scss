@@ -60,8 +60,6 @@ Typography
 :root {
     --heading-font: "El Messiri", sans-serif;
     --body-font: "Nunito Sans", sans-serif;
-    --primary-color: 160, 167, 63;
-    --primary-color: #426900;
     --primary-color: 179, 189, 44;
     --body-color: #333333;
     --heading-color: 5, 11, 32;
@@ -83,7 +81,7 @@ Typography
     --input-color: rgb(var(--white));
     --input-color2: #ffffff;
     --bg-color1: #ffffff;
-    --bg-color2: rgb(var(--primary-color), 0.03);
+    --bg-color2: rgb(var(--primary-color), 0.05);
 
     --border-color1: rgba(231, 234, 243, .7);
     --border-color2: rgba(140, 152, 164, .25);
@@ -377,7 +375,7 @@ h4 {
 }
 
 h5 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 5px;
     font-weight: 700;
 }
@@ -807,62 +805,26 @@ body::-webkit-scrollbar-thumb {
 
 // Scroll bar section end
 // Owl carouse section start
-.owl-stage-outer {
-    position: relative;
-    padding: 20px 0;
 
-}
 
-.owl-carousel:hover {
-    .owl-nav {
-
-        .owl-prev,
-        .owl-next {
-            opacity: 1;
-        }
-
-        .owl-prev {
-            left: calc(0% - 25px);
-        }
-
-        .owl-next {
-            right: calc(0% - 25px);
-        }
-
-    }
-}
 
 .owl-nav {
-
-    margin-top: 0 !important;
 
 
     .owl-prev,
     .owl-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         width: 40px;
         height: 40px;
         border-radius: 50% !important;
         background: rgb(var(--primary-color)) !important;
         background-size: 200% auto !important;
         color: rgb(var(--white)) !important;
-        font-size: 20px !important;
+        font-size: 18px !important;
         transition: var(--transition);
-        opacity: 0;
 
         &:hover {
             background-position: center right !important;
         }
-    }
-
-    .owl-prev {
-        left: calc(0% - 50px);
-    }
-
-    .owl-next {
-        right: calc(0% - 50px);
     }
 
 }
@@ -2132,6 +2094,7 @@ Offcanvas end
     font-weight: 600;
     color: rgb(var(--white));
     display: inline-flex;
+    align-items: center;
     white-space: nowrap;
     transition: var(--transition);
 
@@ -2166,6 +2129,7 @@ Offcanvas end
         border-radius: 50%;
         background-color: rgb(var(--primary-color));
         overflow: hidden;
+        margin-left: -4px;
 
 
         transform: rotate(-40deg);
@@ -5485,16 +5449,211 @@ About section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-00. Property section start
+00. featured section start
 ----------------------------------------------*/
-.property-section{
+.featured-section {
     background-color: var(--bg-color2);
 }
-.property-box{
-    padding: 20px;
-    border-radius: 30px;
-    
+
+.property-box {
+    border: 1px solid var(--border-color1);
+    border-radius: 20px;
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-color1);
+
+    &:hover {
+        box-shadow: var(--shadow1);
+
+        .img-box {
+
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    .rate-area {
+        top: 15px;
+        left: 15px;
+        position: absolute;
+        z-index: 1;
+        color: var(--heading-color);
+
+        .item {
+            background-color: rgb(var(--white));
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            box-shadow: var(--shadow3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.active,
+            &:hover {
+                background-color: rgb(var(--primary-color));
+                color: rgb(var(--white));
+            }
+        }
+    }
+
+    .img-box {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            height: 250px;
+            display: flex;
+            width: 100%;
+            transition: var(--transition);
+            object-fit: cover;
+        }
+
+        .tag-box {
+            position: absolute;
+            display: flex;
+            gap: 15px;
+            bottom: 0;
+            left: 20px;
+            font-size: 14px;
+            color: rgb(var(--white));
+
+            .single-tag {
+                background-color: rgb(var(--primary-color));
+                padding: 2px 15px;
+                transform: skew(-15deg);
+            }
+        }
+    }
+
+    .text-box {
+        padding: 25px;
+        font-size: 14px;
+
+        .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            margin-top: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: var(--heading-font);
+        }
+
+        .address {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+
+            i {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    hr {
+        border-color: var(--border-color2);
+    }
+
+    .meta-data {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    .amenities {
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+
+            i {
+                color: rgb(var(--primary-color));
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: rgb(var(--primary-color), 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .plan-box {
+        display: flex;
+        justify-content: space-between;
+
+        .plan-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .item:nth-child(1) .plan-title {
+            color: #DF00FF;
+        }
+
+        .item:nth-child(2) .plan-title {
+            color: #4666FF;
+        }
+
+        .item:nth-child(3) .plan-title {
+            color: #00FF7F;
+        }
+    }
+
+
 }
+
+// Responsive property section start
+@media(min-width: 576px) {
+
+    .property-box2 {
+        display: flex;
+        height: 100%;
+
+        .image-area {
+            width: 45%;
+            min-width: 45%;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .content-area {
+            flex-grow: 1;
+        }
+    }
+}
+
+// Responsive property section end
+
+// Rtl property section start
+.rtl {
+    .property-box {
+        .rate-area {
+            right: 15px;
+            left: auto;
+        }
+    }
+}
+
+// Rtl property section end
 /*----------------------------------------------
 Property section end
 ----------------------------------------------*/
@@ -5602,25 +5761,27 @@ Faq end
 08. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
     z-index: 0;
     position: relative;
     overflow: hidden;
 
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/hero/4.jpg);
+        height: 100%;
+        width: calc(50% - 30px);
+        top: 0;
+        right: 0;
+        border-radius: 40px 0 0 40px;
+        z-index: -1;
+    }
+
     .testimonial-box {
+        margin-top: 30px;
         position: relative;
         white-space: normal;
-        position: relative;
-        padding: 20px;
-        background: rgb(var(--white));
-        border-radius: 20px;
-        transition: var(--transition);
-        border: 1px solid var(--border-color1);
-
-
-        &:hover {
-            box-shadow: var(--shadow1);
-        }
 
         .profile-box {
             display: flex;
@@ -5639,7 +5800,6 @@ Faq end
                 height: 55px;
                 border-radius: 50%;
                 padding: 2px;
-                box-shadow: var(--shadow2);
                 background-color: rgb(var(--white));
                 border: 1px solid var(--border-color1);
             }
@@ -5656,34 +5816,21 @@ Faq end
     }
 
     .left-side {
-        .img-box {
-            img {
-                border-radius: 20px;
-            }
+        h3 {
+            color: rgb(var(--white));
         }
     }
+
+    .owl-nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
 }
 
 
 // Responsive testimonial section start
-@media(min-width: 1400px) {
-    .testimonial-section {
-        .left-side {
-            .img-box {
-                margin-right: -100px;
-            }
-        }
-
-        .right-side {
-            padding: 25px;
-            border-radius: 20px;
-            background-color: var(--bg-color2);
-            z-index: 1;
-            position: relative;
-            padding-bottom: 10px;
-        }
-    }
-}
 
 @media(max-width: 991px) {
     .testimonial-section {
@@ -5723,63 +5870,31 @@ Testimonial end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-00. Referral section start
+00. latest property section
 ----------------------------------------------*/
-.referral-section-top {
-    .img-box {
-        img {
-            border-radius: 9999px;
-            height: 100%;
-            width: 100%;
-            max-height: 280px;
-            object-fit: cover;
+.latest-property-section {
+    background-color: var(--bg-color2);
+
+    .property-box {
+        display: flex;
+        height: 100%;
+
+        .img-box {
+            width: 40%;
+
+            img {
+                height: 100%;
+            }
         }
-    }
-}
-
-.referral-box {
-    background-color: var(--bg-color2);
-    padding: 25px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    .img-box {
-        width: 80px;
-        min-width: 80px;
-        height: 80px;
-        padding: 15px;
-        border-radius: 10px;
-        background-color: var(--bg-color1);
-    }
-}
-
-/*----------------------------------------------
-Referral section end
-----------------------------------------------*/
-
-/*----------------------------------------------
-Payment section start
-----------------------------------------------*/
-.payment-section {
-    background-color: var(--bg-color2);
-}
-
-.payment-box {
-    .img-box {
-        img {
-            border-radius: 20px;
-            border: 1px solid var(--border-color1);
-            padding: 5px;
-            background-color: rgb(var(--white));
-            object-fit: cover;
+        .text-box{
+            width: 60%;
+            padding: 20px;
         }
     }
 }
 
 /*----------------------------------------------
-Payment section end
+latest property section end
 ----------------------------------------------*/
 
 

@@ -55,8 +55,6 @@ Typography
 :root {
   --heading-font: "El Messiri", sans-serif;
   --body-font: "Nunito Sans", sans-serif;
-  --primary-color: 160, 167, 63;
-  --primary-color: #426900;
   --primary-color: 179, 189, 44;
   --body-color: #333333;
   --heading-color: 5, 11, 32;
@@ -78,7 +76,7 @@ Typography
   --input-color: rgb(var(--white));
   --input-color2: #ffffff;
   --bg-color1: #ffffff;
-  --bg-color2: rgb(var(--primary-color), 0.03);
+  --bg-color2: rgb(var(--primary-color), 0.05);
   --border-color1: rgba(231, 234, 243, .7);
   --border-color2: rgba(140, 152, 164, .25);
   --border-color3: rgba(255, 255, 255, .06);
@@ -335,7 +333,7 @@ h4 {
   }
 }
 h5 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 5px;
   font-weight: 700;
 }
@@ -713,49 +711,20 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: rgb(var(--primary-color));
 }
 
-.owl-stage-outer {
-  position: relative;
-  padding: 20px 0;
-}
-
-.owl-carousel:hover .owl-nav .owl-prev,
-.owl-carousel:hover .owl-nav .owl-next {
-  opacity: 1;
-}
-.owl-carousel:hover .owl-nav .owl-prev {
-  left: calc(0% - 25px);
-}
-.owl-carousel:hover .owl-nav .owl-next {
-  right: calc(0% - 25px);
-}
-
-.owl-nav {
-  margin-top: 0 !important;
-}
 .owl-nav .owl-prev,
 .owl-nav .owl-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   border-radius: 50% !important;
   background: rgb(var(--primary-color)) !important;
   background-size: 200% auto !important;
   color: rgb(var(--white)) !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
   transition: var(--transition);
-  opacity: 0;
 }
 .owl-nav .owl-prev:hover,
 .owl-nav .owl-next:hover {
   background-position: center right !important;
-}
-.owl-nav .owl-prev {
-  left: calc(0% - 50px);
-}
-.owl-nav .owl-next {
-  right: calc(0% - 50px);
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -1762,6 +1731,7 @@ Offcanvas end
   font-weight: 600;
   color: rgb(var(--white));
   display: inline-flex;
+  align-items: center;
   white-space: nowrap;
   transition: var(--transition);
 }
@@ -1789,6 +1759,7 @@ Offcanvas end
   border-radius: 50%;
   background-color: rgb(var(--primary-color));
   overflow: hidden;
+  margin-left: -4px;
   transform: rotate(-40deg);
 }
 .kew-btn .kew-arrow .kt-one,
@@ -4357,15 +4328,167 @@ Feature section end
 About section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Property section start
+00. featured section start
 ----------------------------------------------*/
-.property-section {
+.featured-section {
   background-color: var(--bg-color2);
 }
 
 .property-box {
-  padding: 20px;
-  border-radius: 30px;
+  border: 1px solid var(--border-color1);
+  border-radius: 20px;
+  transition: var(--transition);
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-color1);
+}
+.property-box:hover {
+  box-shadow: var(--shadow1);
+}
+.property-box:hover .img-box img {
+  transform: scale(1.03);
+}
+.property-box .rate-area {
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  z-index: 1;
+  color: var(--heading-color);
+}
+.property-box .rate-area .item {
+  background-color: rgb(var(--white));
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: var(--shadow3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.property-box .rate-area .item.active, .property-box .rate-area .item:hover {
+  background-color: rgb(var(--primary-color));
+  color: rgb(var(--white));
+}
+.property-box .img-box {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.property-box .img-box img {
+  height: 250px;
+  display: flex;
+  width: 100%;
+  transition: var(--transition);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.property-box .img-box .tag-box {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  bottom: 0;
+  left: 20px;
+  font-size: 14px;
+  color: rgb(var(--white));
+}
+.property-box .img-box .tag-box .single-tag {
+  background-color: rgb(var(--primary-color));
+  padding: 2px 15px;
+  transform: skew(-15deg);
+}
+.property-box .text-box {
+  padding: 25px;
+  font-size: 14px;
+}
+.property-box .text-box .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+.property-box .text-box .address {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.property-box .text-box .address i {
+  color: var(--primary-color);
+}
+.property-box hr {
+  border-color: var(--border-color2);
+}
+.property-box .meta-data {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.property-box .amenities {
+  display: flex;
+  justify-content: space-between;
+}
+.property-box .amenities .item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.property-box .amenities .item i {
+  color: rgb(var(--primary-color));
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(var(--primary-color), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.property-box .plan-box {
+  display: flex;
+  justify-content: space-between;
+}
+.property-box .plan-box .plan-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.property-box .plan-box .item:nth-child(1) .plan-title {
+  color: #DF00FF;
+}
+.property-box .plan-box .item:nth-child(2) .plan-title {
+  color: #4666FF;
+}
+.property-box .plan-box .item:nth-child(3) .plan-title {
+  color: #00FF7F;
+}
+
+@media (min-width: 576px) {
+  .property-box2 {
+    display: flex;
+    height: 100%;
+  }
+  .property-box2 .image-area {
+    width: 45%;
+    min-width: 45%;
+  }
+  .property-box2 .image-area img {
+    height: 100%;
+  }
+  .property-box2 .content-area {
+    flex-grow: 1;
+  }
+}
+.rtl .property-box .rate-area {
+  right: 15px;
+  left: auto;
 }
 
 /*----------------------------------------------
@@ -4444,23 +4567,26 @@ Faq end
 08. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
   z-index: 0;
   position: relative;
   overflow: hidden;
 }
+.testimonial-section::after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/hero/4.jpg);
+  height: 100%;
+  width: calc(50% - 30px);
+  top: 0;
+  right: 0;
+  border-radius: 40px 0 0 40px;
+  z-index: -1;
+}
 .testimonial-section .testimonial-box {
+  margin-top: 30px;
   position: relative;
   white-space: normal;
-  position: relative;
-  padding: 20px;
-  background: rgb(var(--white));
-  border-radius: 20px;
-  transition: var(--transition);
-  border: 1px solid var(--border-color1);
-}
-.testimonial-section .testimonial-box:hover {
-  box-shadow: var(--shadow1);
 }
 .testimonial-section .testimonial-box .profile-box {
   display: flex;
@@ -4477,7 +4603,6 @@ Faq end
   height: 55px;
   border-radius: 50%;
   padding: 2px;
-  box-shadow: var(--shadow2);
   background-color: rgb(var(--white));
   border: 1px solid var(--border-color1);
 }
@@ -4488,23 +4613,15 @@ Faq end
 .testimonial-section .testimonial-box .quote-area {
   margin-top: 20px;
 }
-.testimonial-section .left-side .img-box img {
-  border-radius: 20px;
+.testimonial-section .left-side h3 {
+  color: rgb(var(--white));
+}
+.testimonial-section .owl-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
-@media (min-width: 1400px) {
-  .testimonial-section .left-side .img-box {
-    margin-right: -100px;
-  }
-  .testimonial-section .right-side {
-    padding: 25px;
-    border-radius: 20px;
-    background-color: var(--bg-color2);
-    z-index: 1;
-    position: relative;
-    padding-bottom: 10px;
-  }
-}
 @media (max-width: 991px) {
   .testimonial-section .section-header {
     text-align: center;
@@ -4526,55 +4643,28 @@ Faq end
 Testimonial end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Referral section start
+00. latest property section
 ----------------------------------------------*/
-.referral-section-top .img-box img {
-  border-radius: 9999px;
-  height: 100%;
-  width: 100%;
-  max-height: 280px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.referral-box {
+.latest-property-section {
   background-color: var(--bg-color2);
-  padding: 25px;
-  border-radius: 20px;
+}
+.latest-property-section .property-box {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  height: 100%;
 }
-.referral-box .img-box {
-  width: 80px;
-  min-width: 80px;
-  height: 80px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: var(--bg-color1);
+.latest-property-section .property-box .img-box {
+  width: 40%;
 }
-
-/*----------------------------------------------
-Referral section end
-----------------------------------------------*/
-/*----------------------------------------------
-Payment section start
-----------------------------------------------*/
-.payment-section {
-  background-color: var(--bg-color2);
+.latest-property-section .property-box .img-box img {
+  height: 100%;
 }
-
-.payment-box .img-box img {
-  border-radius: 20px;
-  border: 1px solid var(--border-color1);
-  padding: 5px;
-  background-color: rgb(var(--white));
-  -o-object-fit: cover;
-     object-fit: cover;
+.latest-property-section .property-box .text-box {
+  width: 60%;
+  padding: 20px;
 }
 
 /*----------------------------------------------
-Payment section end
+latest property section end
 ----------------------------------------------*/
 /*----------------------------------------------
 18. Blog section start

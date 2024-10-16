@@ -41,13 +41,13 @@ $(document).ready(function () {
 
             },
             768: {
-                items: 2,
+                items: 1,
                 nav: true,
                 dots: false,
 
             },
             1000: {
-                items: 2,
+                items: 1,
                 nav: true,
                 dots: false,
             }
