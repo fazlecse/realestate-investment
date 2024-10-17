@@ -363,7 +363,7 @@ figure {
 }
 
 .footer-logo {
-  max-width: 150px;
+  max-width: 200px;
   min-width: 100px;
 }
 
@@ -4033,7 +4033,7 @@ Padding bottom
   transition: var(--transition);
   border-radius: 0;
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
 }
 .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
   color: rgb(var(--primary-color));
@@ -4198,13 +4198,18 @@ Bottom Mobile, Tab nav end
 }
 
 @media (max-width: 991px) {
+  .hero-section {
+    padding: 130px 0 50px 0;
+  }
   .hero-title {
     font-size: 42px;
   }
-}
-@media (max-width: 767px) {
-  .hero-section {
-    padding: 100px 0 50px 0;
+  .hero-bottom {
+    margin-top: 30px;
+  }
+  .statistics-container {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 .rtl .video-play-btn {
@@ -4273,7 +4278,9 @@ Feature section end
 .about-section::after {
   position: absolute;
   content: "";
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/hero/3.jpg);
+  background-image: linear-gradient(rgb(var(--primary-color), 0.4), rgb(var(--primary-color), 0.4)), url(../img/hero/3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   width: calc(50% - 30px);
   top: 0;
@@ -4286,25 +4293,9 @@ Feature section end
   color: rgb(var(--white));
 }
 
-@media (max-width: 1199px) {
-  .about-section .about-image-area .img2 {
-    max-width: 250px;
-    margin-top: -170px;
-  }
-}
-@media (max-width: 767px) {
-  .about-section {
-    text-align: center;
-  }
-  .about-section .about-content .item-list-container .item {
-    flex-direction: column;
-  }
-  .about-section .about-content .item-list-container .item .icon-box {
-    margin: auto;
-  }
-  .experience {
-    right: 30px;
-    bottom: 30px;
+@media (max-width: 991px) {
+  .about-section::after {
+    display: none;
   }
 }
 .rtl .about-section .thumbs-area .about-image {
@@ -4397,7 +4388,7 @@ About section end
   transform: skew(-15deg);
 }
 .property-box .text-box {
-  padding: 25px;
+  padding: 20px;
   font-size: 14px;
 }
 .property-box .text-box .title {
@@ -4434,6 +4425,8 @@ About section end
 .property-box .amenities {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 5px;
 }
 .property-box .amenities .item {
   display: flex;
@@ -4575,7 +4568,9 @@ Faq end
 .testimonial-section::after {
   position: absolute;
   content: "";
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/hero/4.jpg);
+  background-image: linear-gradient(rgb(var(--primary-color), 0.4), rgb(var(--primary-color), 0.4)), url(../img/products/house/3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   width: calc(50% - 30px);
   top: 0;
@@ -4623,8 +4618,16 @@ Faq end
 }
 
 @media (max-width: 991px) {
-  .testimonial-section .section-header {
+  .testimonial-section::after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-section .testimonial-box {
     text-align: center;
+  }
+  .testimonial-section .testimonial-box .profile-box {
+    justify-content: center;
   }
 }
 @media (min-width: 1400px) {
@@ -4643,34 +4646,196 @@ Faq end
 Testimonial end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. latest property section
+00. latest property section start
 ----------------------------------------------*/
 .latest-property-section {
   background-color: var(--bg-color2);
 }
-.latest-property-section .property-box {
-  display: flex;
-  height: 100%;
-}
-.latest-property-section .property-box .img-box {
-  width: 40%;
-}
-.latest-property-section .property-box .img-box img {
-  height: 100%;
-}
-.latest-property-section .property-box .text-box {
-  width: 60%;
-  padding: 20px;
-}
 
+@media (min-width: 768px) {
+  .latest-property-section .property-box {
+    display: flex;
+    height: 100%;
+  }
+  .latest-property-section .property-box .img-box {
+    width: 40%;
+  }
+  .latest-property-section .property-box .img-box img {
+    height: 100%;
+  }
+  .latest-property-section .property-box .text-box {
+    width: 60%;
+    padding: 20px;
+  }
+}
 /*----------------------------------------------
 latest property section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Commission section end
+----------------------------------------------*/
+.working-steps {
+  position: relative;
+}
+
+.workflow-progress {
+  position: absolute;
+  top: 10px;
+  z-index: -1;
+  width: 100%;
+  height: 60px;
+  transition: width 1.5s linear;
+}
+.workflow-progress::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  background-image: url(../img/commission/dashed-line.svg);
+  background-repeat: no-repeat;
+}
+.workflow-progress .dot {
+  left: -2px;
+  bottom: -15px;
+  position: absolute;
+}
+.workflow-progress .map-icon {
+  bottom: 6px;
+  right: -10px;
+  z-index: 1;
+  position: absolute;
+}
+
+@media (min-width: 1400px) {
+  .workflow-progress::after {
+    height: 120px;
+    background-size: cover;
+  }
+  .workflow-progress .dot {
+    left: -2px;
+    bottom: -25px;
+  }
+  .workflow-progress .map-icon {
+    bottom: 15px;
+    right: -10px;
+  }
+}
+@media (max-width: 1199px) {
+  .workflow-progress .map-icon {
+    bottom: -50px;
+    right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .workflow-progress {
+    display: none;
+  }
+}
+.commission-box {
+  position: relative;
+  text-align: center;
+  transition: var(--transition);
+}
+.commission-box:hover .icon-area {
+  color: rgb(var(--white));
+}
+.commission-box:hover .icon-area::after, .commission-box:hover .icon-area::before {
+  background-color: rgb(var(--primary-color));
+}
+.commission-box:hover .icon-area .number {
+  color: rgb(var(--heading-color));
+  border-color: rgb(var(--primary-color));
+  box-shadow: 0 10px 30px rgb(var(--primary-color), 0.5);
+}
+.commission-box .icon-area {
+  width: 100px;
+  height: 100px;
+  font-size: 35px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  margin-bottom: 50px;
+  color: rgb(var(--primary-color));
+}
+.commission-box .icon-area::after, .commission-box .icon-area::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  background-color: #ececec;
+  transition: var(--transition);
+}
+.commission-box .icon-area::after {
+  top: 8px;
+  left: 8px;
+  z-index: -2;
+  transform: rotate(-8deg);
+}
+.commission-box .icon-area::before {
+  z-index: -1;
+  background-color: #f9f9f9;
+}
+.commission-box .icon-area .number {
+  top: -20px;
+  right: -20px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  color: var(--body-color);
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  position: absolute;
+  border: 2px solid transparent;
+  background-color: rgb(var(--white));
+  box-shadow: 0 10px 30px rgba(100, 100, 100, 0.2);
+}
+.commission-box .text-area {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.commission-box .text-area .title {
+  margin-bottom: 0;
+}
+.commission-box .text-area .subtitle {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .commission-box {
+    height: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .commission-box .icon-area {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .commission-box {
+    padding: 20px;
+  }
+}
+/*----------------------------------------------
+Commission section end
 ----------------------------------------------*/
 /*----------------------------------------------
 18. Blog section start
 ----------------------------------------------*/
 .blog-section {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
   z-index: 0;
   position: relative;
 }
@@ -4687,13 +4852,13 @@ latest property section end
   width: 100px;
   min-width: 100px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 20px;
 }
 .blog-box .img-box img {
   width: 100px;
   min-width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 20px;
   transition: var(--transition);
   -o-object-fit: cover;
      object-fit: cover;
@@ -4719,6 +4884,7 @@ latest property section end
   gap: 5px;
   text-transform: capitalize;
   position: relative;
+  font-weight: 500;
 }
 .meta .item a {
   display: flex;
@@ -5092,9 +5258,10 @@ Author section end
   height: 50px;
   padding: 10px 50px 10px 10px;
   border-color: var(--border-color1);
+  box-shadow: var(--shadow1);
 }
 .newsletter-form .form-control:focus {
-  border-color: var(--primary-color);
+  border-color: rgb(var(--primary-color));
 }
 .newsletter-form .subscribe-btn {
   transition: var(--transition);
@@ -5104,7 +5271,7 @@ Author section end
   height: calc(100% - 10px);
   width: 40px;
   border-radius: 50%;
-  color: var(--white);
+  color: rgb(var(--white));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5135,8 +5302,7 @@ Newsletter end
   position: relative;
   z-index: 0;
   padding: 100px 0 50px;
-  background-color: #000000;
-  color: rgb(var(--white), 0.8);
+  overflow: hidden;
 }
 .footer-section .footer-shape img {
   position: absolute;
@@ -5284,7 +5450,7 @@ Copyright end
   position: relative;
   padding-top: 170px;
   padding-bottom: 90px;
-  background-image: url(../img/banner/pexels-magda-ehlers-pexels-772177.jpg);
+  background-image: url(../img/banner/pexels-frans.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5659,7 +5825,7 @@ Login Signup end
 .sidebar-widget-area .sidebar-widget-item .image-area img {
   width: 100%;
   height: 100%;
-  border-radius: 9999px;
+  border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }
