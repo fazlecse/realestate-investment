@@ -59,8 +59,6 @@ Typography
   --body-color: #333333;
   --heading-color: 5, 11, 32;
   --black: 5, 11, 32;
-  --btn-hover-bg: hsl(var(--base)/.8);
-  --btn-hover-bg2: #332f8c;
   --light-gray: #dddddd;
   --white: 255, 255, 255;
   --soft-blue: #C1BFFD;
@@ -72,9 +70,8 @@ Typography
   --vivid-orange: #fb6116;
   --soft-magenta: 204, 84, 244;
   --yellow: #FCDA69;
-  --orange: #FFC83E;
+  --orange: 255, 200, 62;
   --input-color: rgb(var(--white));
-  --input-color2: #ffffff;
   --bg-color1: #ffffff;
   --bg-color2: rgb(var(--primary-color), 0.05);
   --border-color1: rgba(231, 234, 243, .7);
@@ -86,63 +83,6 @@ Typography
   --transition: all .3s ease-in-out;
 }
 
-/*----------------------------------------------
-Dark theme section start
-----------------------------------------------*/
-.dark-theme {
-  --bg-color1: linear-gradient(152deg, rgba(237, 242, 248, 0.02) 0%, rgba(237, 242, 248, 0.08) 100%);
-  --bg-color2: #2c403d;
-  --bg-color3: #1B2D29;
-  --heading-color: #ffffff;
-  --border-color1: #37333e;
-  --border-color2: rgba(234, 219, 215, 0.06);
-  --border-color3: #ffffff;
-  --bg-grad-color: #253A33;
-  --input-color: #1B2D29;
-}
-.dark-theme p {
-  color: #d1cbdb;
-}
-.dark-theme .form-control,
-.dark-theme .form-select {
-  color: rgb(var(--primary-color));
-  border: 1px solid var(--bg-color3);
-}
-.dark-theme .form-control:focus {
-  color: var(--heading-color);
-  background-color: var(--bg-color3);
-}
-.dark-theme .select2-dropdown {
-  background-color: var(--bg-color2);
-}
-.dark-theme .select2-container--default .select2-selection--single {
-  background-color: var(--bg-color2);
-}
-.dark-theme .select2-container--default .select2-selection--single .select2-selection__rendered {
-  color: rgb(var(--primary-color));
-}
-.dark-theme .select2-container .select2-dropdown .select2-search__field {
-  background-color: rgb(var(--primary-color));
-  color: rgb(var(--primary-color));
-}
-.dark-theme .cmn-box {
-  background-color: rgb(var(--primary-color));
-}
-.dark-theme .cmn-btn3 {
-  background-color: rgb(var(--primary-color));
-  border-color: var(--bg-color3);
-  color: rgb(var(--primary-color));
-}
-.dark-theme .section-subtitle::after {
-  background: linear-gradient(90deg, #30185f, rgba(217, 217, 217, 0));
-}
-.dark-theme hr.divider:after {
-  background-color: transparent;
-}
-
-/*----------------------------------------------
-Dark theme section end
-----------------------------------------------*/
 /*----------------------------------------------
 Reset section start
 ----------------------------------------------*/
@@ -549,7 +489,7 @@ span.select2.select2-container.select2-container--default {
   height: 45px;
   display: flex;
   align-items: center;
-  background: rgb(var(--primary-color));
+  background: rgb(var(--white));
   font-size: 15px;
   padding: 0.375rem 15px;
 }
@@ -584,11 +524,11 @@ span.select2.select2-container.select2-container--default {
 
 .select2-container--default .select2-results__option--selected {
   background: rgb(var(--primary-color));
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
 }
 .select2-container--default .select2-results__option--selected:hover {
   background-color: rgb(var(--primary-color));
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
 }
 
 .select2-container--default .select2-results > .select2-results__options {
@@ -675,13 +615,6 @@ Breadcrumb start
 /*----------------------------------------------
 Breadcrumb end
 ----------------------------------------------*/
-.cmn-scroll {
-  max-height: 255px;
-  overflow: scroll;
-  padding-right: 5px;
-  padding-top: 10px;
-}
-
 ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
@@ -750,7 +683,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .modal-content {
-  background-color: var(--bg-color3);
+  background-color: var(--bg-color1);
 }
 
 .modal-header {
@@ -761,8 +694,7 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   gap: 5px;
   align-items: center;
-  font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .modal-footer {
@@ -1498,7 +1430,7 @@ Offcanvas end
   justify-content: center;
   text-transform: capitalize;
   gap: 5px;
-  border-radius: 5px;
+  border-radius: 9999px;
 }
 .cmn-btn:hover {
   background-color: rgb(var(--primary-color), 0.8);
@@ -1508,7 +1440,7 @@ Offcanvas end
 .cmn-btn2 {
   background-color: var(--black);
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 9999px;
   border: 1px solid var(--border-color1);
   transition: var(--transition);
   font-size: 16px;
@@ -1523,10 +1455,10 @@ Offcanvas end
 }
 .cmn-btn2:hover {
   color: rgb(var(--primary-color));
+  box-shadow: var(--shadow1);
 }
-.cmn-btn2.active {
-  background-color: rgb(var(--primary-color));
-  color: rgb(var(--primary-color));
+.cmn-btn2 i {
+  margin-bottom: 3px;
 }
 
 .cmn-btn3 {
@@ -1550,7 +1482,7 @@ Offcanvas end
 
 .cmn-btn4 {
   background-color: rgb(var(--primary-color));
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
   padding: 10px 20px;
   border: 1px solid var(--border-color1);
   transition: var(--transition);
@@ -1563,9 +1495,9 @@ Offcanvas end
   font-weight: 500;
 }
 .cmn-btn4:hover {
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
   box-shadow: var(--shadow2);
-  background-color: var(--btn-hover-bg);
+  background-color: rgb(var(--primary-color));
 }
 
 .rtl .cmn-btn3 img {
@@ -1860,7 +1792,7 @@ Alerts section start
   font-weight: 500;
 }
 .alert-message i {
-  color: var(--orange);
+  color: rgb(var(--orange));
   font-size: 16px;
 }
 
@@ -2025,7 +1957,7 @@ section {
 }
 
 .star-list li .active {
-  color: var(--orange);
+  color: rgb(var(--orange));
 }
 
 .opacity {
@@ -2306,10 +2238,10 @@ hr.divider:after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 10px;
 }
 .cmn-list .item:not(:last-child) {
   border-bottom: 1px dashed var(--border-color2);
+  padding-bottom: 10px;
 }
 
 .rtl .cmn-list .item:not(:last-child)::after {
@@ -2336,7 +2268,7 @@ hr.divider:after {
   color: #dee2e8;
 }
 .reviews li .active {
-  color: var(--orange);
+  color: rgb(var(--orange));
   opacity: 1;
 }
 
@@ -2361,20 +2293,20 @@ hr.divider:after {
   content: "★";
 }
 .ratings > input:checked + label:hover, .ratings > input:checked + label:hover ~ label, .ratings > input:checked ~ label:hover, .ratings > input:checked ~ label:hover ~ label, .ratings > label:hover ~ input:checked ~ label {
-  color: var(--orange);
+  color: rgb(var(--orange));
 }
 .ratings:not(:checked) > label:hover, .ratings:not(:checked) > label:hover ~ label {
-  color: var(--orange);
+  color: rgb(var(--orange));
 }
 .ratings > input:checked ~ label {
-  color: var(--orange);
+  color: rgb(var(--orange));
 }
 
 .average-review .card-box {
   text-align: center;
 }
 .average-review .card-box i {
-  color: var(--orange);
+  color: rgb(var(--orange));
   font-size: 14px;
 }
 .average-review .index {
@@ -2455,7 +2387,7 @@ hr.divider:after {
 }
 .card .card-header {
   padding: 20px;
-  background-color: rgb(var(--primary-color));
+  background-color: rgb(var(--white));
   padding-bottom: 15px;
   border-color: var(--border-color1);
 }
@@ -2546,9 +2478,20 @@ hr.divider:after {
 }
 .checkbox-categories-area .form-check .form-check-label {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
   text-transform: capitalize;
+}
+.checkbox-categories-area .form-check .form-check-label .icon-box {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(var(--primary-color), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
 }
 
 .rtl .checkbox-categories-area .categories-list {
@@ -3696,6 +3639,18 @@ Cmn table end
   }
 }
 
+.callout {
+  background-color: var(--bg-color2);
+  padding: 15px;
+  border-radius: 15px;
+  border-left: 4px solid rgb(var(--primary-color));
+}
+
+@media (min-width: 1600px) {
+  .custom-container {
+    max-width: 1530px;
+  }
+}
 /*----------------------------------------------
 Reusable style section end
 ----------------------------------------------*/
@@ -4224,7 +4179,7 @@ Hero section end
 Feature section start
 ----------------------------------------------*/
 .feature-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
 }
 .feature-section .right-side {
   background-color: var(--bg-color2);
@@ -4272,6 +4227,7 @@ Feature section end
 04. About section start
 ----------------------------------------------*/
 .about-section {
+  background-color: var(--bg-color2);
   position: relative;
   z-index: 0;
 }
@@ -4322,7 +4278,7 @@ About section end
 00. featured section start
 ----------------------------------------------*/
 .featured-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
 }
 
 .property-box {
@@ -4462,6 +4418,9 @@ About section end
 .property-box .plan-box .item:nth-child(3) .plan-title {
   color: #00FF7F;
 }
+.property-box .cmn-btn2 {
+  padding: 6px 20px;
+}
 
 @media (min-width: 576px) {
   .property-box2 {
@@ -4560,7 +4519,7 @@ Faq end
 08. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
   z-index: 0;
   position: relative;
   overflow: hidden;
@@ -4649,7 +4608,7 @@ Testimonial end
 00. latest property section start
 ----------------------------------------------*/
 .latest-property-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
 }
 
 @media (min-width: 768px) {
@@ -4674,6 +4633,10 @@ latest property section end
 /*----------------------------------------------
 00. Commission section end
 ----------------------------------------------*/
+.commission-section {
+  background-color: var(--bg-color2);
+}
+
 .working-steps {
   position: relative;
 }
@@ -4835,7 +4798,7 @@ Commission section end
 18. Blog section start
 ----------------------------------------------*/
 .blog-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
   z-index: 0;
   position: relative;
 }
@@ -5302,6 +5265,7 @@ Newsletter end
   position: relative;
   z-index: 0;
   padding: 100px 0 50px;
+  background-color: var(--bg-color2);
   overflow: hidden;
 }
 .footer-section .footer-shape img {
@@ -5864,26 +5828,15 @@ Login Signup end
 .widget-title {
   margin-bottom: 20px;
   position: relative;
-  padding-bottom: 10px;
   text-transform: capitalize;
+  display: flex;
+  gap: 10px;
 }
 .widget-title::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   content: "";
-  width: 50px;
-  height: 2px;
+  width: 6px;
+  border-radius: 6px;
   background-color: rgb(var(--primary-color));
-}
-.widget-title::after {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  content: "";
-  width: 150px;
-  height: 2px;
-  background-color: rgba(225, 225, 225, 0.4);
 }
 
 .rtl .sidebar-widget-item .content-area {
@@ -6043,214 +5996,45 @@ Policy section end
 /*----------------------------------------------
 Error end
 ----------------------------------------------*/
-.listing-header-section {
+/*----------------------------------------------
+10. Products section start
+----------------------------------------------*/
+@media (min-width: 768px) {
+  .products-section .property-box {
+    display: flex;
+    height: 100%;
+  }
+  .products-section .property-box .img-box {
+    width: 40%;
+  }
+  .products-section .property-box .img-box img {
+    height: 100%;
+  }
+  .products-section .property-box .text-box {
+    width: 60%;
+    padding: 20px;
+  }
+}
+/*----------------------------------------------
+Products section end
+----------------------------------------------*/
+/*----------------------------------------------
+Product details section start
+----------------------------------------------*/
+.product-details-section {
+  background-color: var(--bg-color2);
+}
+
+.products-header-section {
   padding: 50px 0;
 }
-
-/*----------------------------------------------
-10. Listing section start
-----------------------------------------------*/
-.listing-section {
-  background-color: var(--bg-color2);
-}
-.listing-section .accordion-item {
-  border: none;
-  border-radius: 0;
-}
-.listing-section .accordion-item:first-child .accordion-header .accordion-button {
-  padding-top: 0;
-}
-.listing-section .accordion-item:not(:last-child) {
-  border-bottom: 1px solid var(--border-color2);
-}
-.listing-section .accordion-button {
-  padding: 0;
-  padding: 15px 0;
-}
-.listing-section .accordion-button:focus {
-  box-shadow: none;
-}
-.listing-section .accordion-button:not(.collapsed) {
-  background-color: transparent;
-  box-shadow: none;
-}
-.listing-section .accordion-body {
-  padding: 0;
-  padding-bottom: 15px;
-}
-.listing-section .map-section iframe {
-  border: 1px solid var(--border-color1);
-  border-radius: 5px;
-}
-
-.sidebar {
-  padding: 20px;
-  background-color: rgb(var(--primary-color));
-  box-shadow: var(--shadow1);
-  border-radius: 5px;
-  border: 1px solid var(--border-color1);
-}
-.sidebar .accordion-item {
-  margin: 0;
-}
-
-.category-container {
-  font-size: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.category-container .title {
-  font-weight: 600;
-}
-.category-container .item a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  text-transform: capitalize;
-}
-.category-container .item img {
-  width: 18px;
-}
-
-.sub-category-container {
-  padding-left: 15px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.listing-topbar {
-  background-color: rgb(var(--primary-color));
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  box-shadow: var(--shadow1);
-  border: 1px solid var(--border-color1);
-}
-
-@media (min-width: 992px) {
-  .listing-section .map-section {
-    position: sticky;
-    top: 80px;
-  }
-  .listing-section .map-section iframe {
-    height: calc(100vh - 80px);
-  }
-}
-.rtl .sidebar .widget-title::before {
-  left: auto;
-  right: 0;
-}
-.rtl .sidebar .widget-title::after {
-  left: auto;
-  right: 0;
+.products-header-section .invest-price span {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /*----------------------------------------------
-Listing section end
-----------------------------------------------*/
-/*----------------------------------------------
-Listing details section start
-----------------------------------------------*/
-.listing-details-section {
-  background-color: var(--bg-color2);
-}
-.listing-details-section .section-header .location {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-weight: 600;
-}
-.listing-details-section .section-header .location i {
-  font-size: 20px;
-  color: rgb(var(--primary-color));
-}
-.listing-details-section .accordion-button::after {
-  background: url(../img/accordion/plus.png);
-  width: 25px;
-  height: 25px;
-  background-color: rgb(var(--primary-color));
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 5px;
-}
-.listing-details-section .accordion-button:not(.collapsed)::after {
-  background: url(../img/accordion/minus.png);
-  width: 25px;
-  height: 25px;
-  background-color: rgb(var(--primary-color));
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 5px;
-}
-.listing-details-section .map-section iframe {
-  border-radius: 5px;
-  border: 1px solid var(--border-color1) !important;
-}
-
-.author-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.author-profile .img-box img {
-  width: 60px;
-  min-width: 60px;
-  height: 60px;
-  border-radius: 10px;
-}
-
-.cmn-btn4.share {
-  position: relative;
-}
-.cmn-btn4.share:hover #shareBlock {
-  opacity: 1;
-  visibility: visible;
-}
-.cmn-btn4.share #shareBlock {
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition);
-  position: absolute;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 212px;
-  background-color: rgb(var(--primary-color));
-  padding: 10px;
-  border: 1px solid var(--border-color1);
-  box-shadow: var(--shadow1);
-  border-radius: 5px;
-  bottom: calc(100% + 5px);
-  left: 0;
-}
-.cmn-btn4.share #shareBlock .btn-light {
-  font-size: 10px;
-  width: 40px;
-  height: 40px;
-}
-
-.rtl .cmn-btn4.share #shareBlock {
-  right: auto;
-  left: 0;
-}
-
-/*----------------------------------------------
-Listing details section end
-----------------------------------------------*/
-/*----------------------------------------------
-00. Related listing section end
-----------------------------------------------*/
-.related-products-section {
-  overflow: hidden;
-  background-color: var(--bg-color3);
-}
-
-/*----------------------------------------------
-Related listing section end
+Product details section end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Author section start
@@ -6283,4 +6067,62 @@ Related listing section end
 
 /*----------------------------------------------
 Author section end
+----------------------------------------------*/
+/*----------------------------------------------
+00. Banner slider section start
+----------------------------------------------*/
+.banner-slider-section {
+  margin-top: 80px;
+}
+
+.banner-slider {
+  overflow: hidden;
+}
+.banner-slider:hover .owl-nav .owl-prev,
+.banner-slider:hover .owl-nav .owl-next {
+  opacity: 1;
+}
+.banner-slider:hover .owl-nav .owl-prev {
+  left: 0;
+}
+.banner-slider:hover .owl-nav .owl-next {
+  right: 0;
+}
+.banner-slider .owl-nav .owl-prev,
+.banner-slider .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  background: rgb(var(--primary-color)) !important;
+  background-size: 200% auto !important;
+  color: rgb(var(--white)) !important;
+  font-size: 20px !important;
+  transition: var(--transition);
+  opacity: 0;
+}
+.banner-slider .owl-nav .owl-prev:hover,
+.banner-slider .owl-nav .owl-next:hover {
+  background-position: center right !important;
+}
+.banner-slider .owl-nav .owl-prev {
+  left: calc(0% - 25px);
+}
+.banner-slider .owl-nav .owl-next {
+  right: calc(0% - 25px);
+}
+.banner-slider .owl-stage-outer {
+  padding: 0;
+}
+.banner-slider .item a {
+  cursor: url(../img/cursor/pointer.png), auto;
+}
+.banner-slider .item a img {
+  max-height: 400px;
+}
+
+/*----------------------------------------------
+Banner slider section end
 ----------------------------------------------*/

@@ -64,8 +64,6 @@ Typography
     --body-color: #333333;
     --heading-color: 5, 11, 32;
     --black: 5, 11, 32;
-    --btn-hover-bg: hsl(var(--base)/.8);
-    --btn-hover-bg2: #332f8c;
     --light-gray: #dddddd;
     --white: 255, 255, 255;
     --soft-blue: #C1BFFD;
@@ -77,9 +75,8 @@ Typography
     --vivid-orange: #fb6116;
     --soft-magenta: 204, 84, 244;
     --yellow: #FCDA69;
-    --orange: #FFC83E;
+    --orange: 255, 200, 62;
     --input-color: rgb(var(--white));
-    --input-color2: #ffffff;
     --bg-color1: #ffffff;
     --bg-color2: rgb(var(--primary-color), 0.05);
 
@@ -95,80 +92,6 @@ Typography
 }
 
 // primary: #A0A73F
-
-/*----------------------------------------------
-Dark theme section start
-----------------------------------------------*/
-.dark-theme {
-    --bg-color1: linear-gradient(152deg, rgba(237, 242, 248, 0.02) 0%, rgba(237, 242, 248, 0.08) 100%);
-    --bg-color2: #2c403d;
-    --bg-color3: #1B2D29;
-    --heading-color: #ffffff;
-    --border-color1: #37333e;
-    --border-color2: rgba(234, 219, 215, 0.06);
-    --border-color3: #ffffff;
-    --bg-grad-color: #253A33;
-    --input-color: #1B2D29;
-
-    p {
-        color: #d1cbdb;
-    }
-
-    .form-control,
-    .form-select {
-        color: rgb(var(--primary-color));
-        border: 1px solid var(--bg-color3);
-
-    }
-
-    .form-control:focus {
-        color: var(--heading-color);
-        background-color: var(--bg-color3);
-    }
-
-
-    .select2-dropdown {
-        background-color: var(--bg-color2);
-    }
-
-    .select2-container--default .select2-selection--single {
-        background-color: var(--bg-color2);
-    }
-
-    .select2-container--default .select2-selection--single .select2-selection__rendered {
-        color: rgb(var(--primary-color));
-    }
-
-    .select2-container .select2-dropdown .select2-search__field {
-        background-color: rgb(var(--primary-color));
-        color: rgb(var(--primary-color));
-    }
-
-    .cmn-box {
-        background-color: rgb(var(--primary-color));
-    }
-
-
-
-    .cmn-btn3 {
-        background-color: rgb(var(--primary-color));
-        border-color: var(--bg-color3);
-        color: rgb(var(--primary-color));
-    }
-
-    .section-subtitle::after {
-        background: linear-gradient(90deg, #30185f, rgba(217, 217, 217, 0));
-    }
-
-    hr.divider:after {
-        background-color: transparent;
-    }
-
-}
-
-/*----------------------------------------------
-Dark theme section end
-----------------------------------------------*/
 
 
 /*----------------------------------------------
@@ -609,7 +532,7 @@ span.select2.select2-container.select2-container--default {
     height: 45px;
     display: flex;
     align-items: center;
-    background: rgb(var(--primary-color));
+    background: rgb(var(--white));
     font-size: 15px;
     padding: 0.375rem 15px;
 }
@@ -649,11 +572,11 @@ span.select2.select2-container.select2-container--default {
 
 .select2-container--default .select2-results__option--selected {
     background: rgb(var(--primary-color));
-    color: rgb(var(--primary-color));
+    color: rgb(var(--white));
 
     &:hover {
         background-color: rgb(var(--primary-color));
-        color: rgb(var(--primary-color));
+        color: rgb(var(--white));
     }
 }
 
@@ -763,13 +686,6 @@ Breadcrumb end
 
 
 // Scroll bar section start
-.cmn-scroll {
-    max-height: 255px;
-    overflow: scroll;
-    padding-right: 5px;
-    padding-top: 10px;
-}
-
 ::-webkit-scrollbar {
     width: 3px;
     height: 3px;
@@ -801,13 +717,9 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
-
 // Scroll bar section end
+
 // Owl carouse section start
-
-
-
 .owl-nav {
 
 
@@ -855,7 +767,7 @@ body::-webkit-scrollbar-thumb {
 
 // Modal section start 
 .modal-content {
-    background-color: var(--bg-color3);
+    background-color: var(--bg-color1);
 }
 
 .modal-header {
@@ -866,8 +778,8 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         gap: 5px;
         align-items: center;
-        font-size: 20px;
-        font-weight: 500;
+        // font-size: 20px;
+        font-weight: 600;
     }
 }
 
@@ -1829,7 +1741,7 @@ Offcanvas end
     justify-content: center;
     text-transform: capitalize;
     gap: 5px;
-    border-radius: 5px;
+    border-radius: 9999px;
 
     &:hover {
         background-color: rgb(var(--primary-color), 0.8);
@@ -1841,7 +1753,7 @@ Offcanvas end
 .cmn-btn2 {
     background-color: var(--black);
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 9999px;
     border: 1px solid var(--border-color1);
     transition: var(--transition);
     font-size: 16px;
@@ -1856,11 +1768,11 @@ Offcanvas end
 
     &:hover {
         color: rgb(var(--primary-color));
+        box-shadow: var(--shadow1);
     }
 
-    &.active {
-        background-color: rgb(var(--primary-color));
-        color: rgb(var(--primary-color));
+    i {
+        margin-bottom: 3px;
     }
 }
 
@@ -1886,7 +1798,7 @@ Offcanvas end
 
 .cmn-btn4 {
     background-color: rgb(var(--primary-color));
-    color: rgb(var(--primary-color));
+    color: rgb(var(--white));
     padding: 10px 20px;
     border: 1px solid var(--border-color1);
     transition: var(--transition);
@@ -1899,9 +1811,9 @@ Offcanvas end
     font-weight: 500;
 
     &:hover {
-        color: rgb(var(--primary-color));
+        color: rgb(var(--white));
         box-shadow: var(--shadow2);
-        background-color: var(--btn-hover-bg);
+        background-color: rgb(var(--primary-color));
     }
 }
 
@@ -2249,7 +2161,7 @@ Alerts section start
     font-weight: 500;
 
     i {
-        color: var(--orange);
+        color: rgb(var(--orange));
         font-size: 16px;
     }
 }
@@ -2457,7 +2369,7 @@ section {
 }
 
 .star-list li .active {
-    color: var(--orange);
+    color: rgb(var(--orange));
 }
 
 .opacity {
@@ -2808,10 +2720,11 @@ hr.divider:after {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 10px;
+
 
         &:not(:last-child) {
             border-bottom: 1px dashed var(--border-color2);
+            padding-bottom: 10px;
         }
     }
 
@@ -2856,7 +2769,7 @@ hr.divider:after {
     }
 
     .active {
-        color: var(--orange);
+        color: rgb(var(--orange));
         opacity: 1;
     }
 }
@@ -2891,16 +2804,16 @@ hr.divider:after {
     &>input:checked~label:hover,
     &>input:checked~label:hover~label,
     &>label:hover~input:checked~label {
-        color: var(--orange);
+        color: rgb(var(--orange));
     }
 
     &:not(:checked)>label:hover,
     &:not(:checked)>label:hover~label {
-        color: var(--orange);
+        color: rgb(var(--orange));
     }
 
     &>input:checked~label {
-        color: var(--orange);
+        color: rgb(var(--orange));
     }
 }
 
@@ -2911,7 +2824,7 @@ hr.divider:after {
         text-align: center;
 
         i {
-            color: var(--orange);
+            color: rgb(var(--orange));
             font-size: 14px;
         }
     }
@@ -3035,7 +2948,7 @@ hr.divider:after {
 
     .card-header {
         padding: 20px;
-        background-color: rgb(var(--primary-color));
+        background-color: rgb(var(--white));
         padding-bottom: 15px;
         border-color: var(--border-color1);
 
@@ -3150,12 +3063,25 @@ hr.divider:after {
 
         .form-check-label {
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
             cursor: pointer;
             text-transform: capitalize;
+
+            .icon-box {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: rgb(var(--primary-color), 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+            }
         }
     }
 }
+
 
 // Rtl checkbox categories area start
 .rtl {
@@ -4679,6 +4605,21 @@ Cmn table end
     }
 }
 
+// Callout start
+.callout {
+    background-color: var(--bg-color2);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid rgb(var(--primary-color));
+}
+
+// Callout end
+@media(min-width: 1600px) {
+    .custom-container {
+        max-width: 1530px;
+    }
+}
+
 /*----------------------------------------------
 Reusable style section end
 ----------------------------------------------*/
@@ -5308,7 +5249,7 @@ Hero section end
 Feature section start
 ----------------------------------------------*/
 .feature-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
 
     .right-side {
         background-color: var(--bg-color2);
@@ -5366,6 +5307,7 @@ Feature section end
 04. About section start
 ----------------------------------------------*/
 .about-section {
+    background-color: var(--bg-color2);
     position: relative;
     z-index: 0;
 
@@ -5438,7 +5380,7 @@ About section end
 00. featured section start
 ----------------------------------------------*/
 .featured-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
 }
 
 .property-box {
@@ -5604,6 +5546,9 @@ About section end
         }
     }
 
+    .cmn-btn2 {
+        padding: 6px 20px;
+    }
 
 }
 
@@ -5749,7 +5694,7 @@ Faq end
 08. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color2);
     z-index: 0;
     position: relative;
     overflow: hidden;
@@ -5823,15 +5768,16 @@ Faq end
 // Responsive testimonial section start
 
 @media(max-width: 991px) {
-    .testimonial-section::after{
+    .testimonial-section::after {
         display: none;
     }
 }
 
 @media(max-width: 767px) {
-    .testimonial-section .testimonial-box{
+    .testimonial-section .testimonial-box {
         text-align: center;
-        .profile-box{
+
+        .profile-box {
             justify-content: center;
         }
     }
@@ -5869,24 +5815,25 @@ Testimonial end
 00. latest property section start
 ----------------------------------------------*/
 .latest-property-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
 }
+
 // Responsive latest property section start
-@media(min-width: 768px){
+@media(min-width: 768px) {
     .latest-property-section {
-    
+
         .property-box {
             display: flex;
             height: 100%;
-    
+
             .img-box {
                 width: 40%;
-    
+
                 img {
                     height: 100%;
                 }
             }
-    
+
             .text-box {
                 width: 60%;
                 padding: 20px;
@@ -5894,6 +5841,7 @@ Testimonial end
         }
     }
 }
+
 // Responsive latest property section end
 /*----------------------------------------------
 latest property section end
@@ -5902,6 +5850,9 @@ latest property section end
 /*----------------------------------------------
 00. Commission section end
 ----------------------------------------------*/
+.commission-section {
+    background-color: var(--bg-color2);
+}
 
 .working-steps {
     position: relative;
@@ -6088,11 +6039,12 @@ latest property section end
 
 @media(max-width: 991px) {
     .commission-box {
-        .icon-area{
+        .icon-area {
             margin-bottom: 20px;
         }
     }
 }
+
 @media(max-width: 575px) {
     .commission-box {
         padding: 20px;
@@ -6113,7 +6065,7 @@ Commission section end
 18. Blog section start
 ----------------------------------------------*/
 .blog-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
     z-index: 0;
     position: relative;
 }
@@ -6732,8 +6684,7 @@ Newsletter end
     position: relative;
     z-index: 0;
     padding: 100px 0 50px;
-    // background-color: #000000;
-    // color: rgb(var(--white), 0.8);
+    background-color: var(--bg-color2);
     overflow: hidden;
 
     .footer-shape {
@@ -7461,28 +7412,17 @@ Login Signup end
 .widget-title {
     margin-bottom: 20px;
     position: relative;
-    padding-bottom: 10px;
     text-transform: capitalize;
+    display: flex;
+    gap: 10px;
 
     &::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
         content: "";
-        width: 50px;
-        height: 2px;
+        width: 6px;
+        border-radius: 6px;
         background-color: rgb(var(--primary-color));
     }
 
-    &::after {
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        content: "";
-        width: 150px;
-        height: 2px;
-        background-color: rgba(225, 225, 225, 0.40);
-    }
 }
 
 // Blog details rtl start
@@ -7708,289 +7648,64 @@ Policy section end
 /*----------------------------------------------
 Error end
 ----------------------------------------------*/
-// Listing header section start
-.listing-header-section {
+
+/*----------------------------------------------
+10. Products section start
+----------------------------------------------*/
+
+// Responsive latest property section start
+@media(min-width: 768px) {
+    .products-section {
+
+        .property-box {
+            display: flex;
+            height: 100%;
+
+            .img-box {
+                width: 40%;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .text-box {
+                width: 60%;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+// Responsive latest property section end
+/*----------------------------------------------
+Products section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Product details section start
+----------------------------------------------*/
+.product-details-section{
+    background-color: var(--bg-color2);
+}
+// Products header section start
+.products-header-section {
     padding: 50px 0;
-}
 
-// Listing header section end
-/*----------------------------------------------
-10. Listing section start
-----------------------------------------------*/
-.listing-section {
-    background-color: var(--bg-color2);
-
-    .accordion-item {
-        border: none;
-
-        border-radius: 0;
-
-        &:first-child .accordion-header {
-            .accordion-button {
-                padding-top: 0;
-            }
-        }
-    }
-
-    .accordion-item:not(:last-child) {
-        border-bottom: 1px solid var(--border-color2);
-    }
-
-    .accordion-button {
-        padding: 0;
-        padding: 15px 0;
-
-        &:focus {
-            box-shadow: none;
-        }
-
-        &:not(.collapsed) {
-            background-color: transparent;
-            box-shadow: none;
-        }
-
-
-    }
-
-    .accordion-body {
-        padding: 0;
-        padding-bottom: 15px;
-    }
-
-    .map-section {
-
-        iframe {
-            border: 1px solid var(--border-color1);
-            border-radius: 5px;
-        }
-    }
-
-}
-
-.sidebar {
-    padding: 20px;
-    background-color: rgb(var(--primary-color));
-    box-shadow: var(--shadow1);
-    border-radius: 5px;
-    border: 1px solid var(--border-color1);
-
-    .accordion-item {
-        margin: 0;
-    }
-}
-
-.category-container {
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    .title {
-        font-weight: 600;
-    }
-
-    .item {
-        a {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            text-transform: capitalize;
-        }
-
-
-        img {
-            width: 18px;
+    .invest-price {
+        span {
+            font-size: 18px;
+            font-weight: 500;
         }
     }
 }
 
-.sub-category-container {
-    padding-left: 15px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.listing-topbar {
-    background-color: rgb(var(--primary-color));
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow1);
-    border: 1px solid var(--border-color1);
-}
-
-// Responsive Listing section start
-@media(min-width: 992px) {
-    .listing-section .map-section {
-        position: sticky;
-        top: 80px;
-
-        iframe {
-            height: calc(100vh - 80px);
-        }
-    }
-
-}
-
-// Responsive Listing section end
-// Rtl products details start
-.rtl {
-    .sidebar {
-        .widget-title {
-            &::before {
-                left: auto;
-                right: 0;
-            }
-
-            &::after {
-
-                left: auto;
-                right: 0;
-
-            }
-        }
-    }
-}
-
-// Rtl products details end
-/*----------------------------------------------
-Listing section end
-----------------------------------------------*/
+// Products header section end
 
 /*----------------------------------------------
-Listing details section start
-----------------------------------------------*/
-.listing-details-section {
-    background-color: var(--bg-color2);
-
-    .section-header {
-        .location {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            font-weight: 600;
-
-            i {
-                font-size: 20px;
-                color: rgb(var(--primary-color));
-            }
-        }
-    }
-
-    .accordion-button {
-        &::after {
-            background: url(../img/accordion/plus.png);
-            width: 25px;
-            height: 25px;
-            background-color: rgb(var(--primary-color));
-            background-size: 50%;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 5px;
-        }
-
-        &:not(.collapsed) {
-            &::after {
-                background: url(../img/accordion/minus.png);
-                width: 25px;
-                height: 25px;
-                background-color: rgb(var(--primary-color));
-                background-size: 50%;
-                background-repeat: no-repeat;
-                background-position: center;
-                border-radius: 5px;
-            }
-        }
-    }
-
-    .map-section {
-        iframe {
-            border-radius: 5px;
-            border: 1px solid var(--border-color1) !important;
-        }
-    }
-}
-
-.author-profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    .img-box {
-        img {
-            width: 60px;
-            min-width: 60px;
-            height: 60px;
-            border-radius: 10px;
-        }
-    }
-}
-
-.cmn-btn4.share {
-    position: relative;
-
-    &:hover {
-        #shareBlock {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
-    #shareBlock {
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-        position: absolute;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 212px;
-        background-color: rgb(var(--primary-color));
-        padding: 10px;
-        border: 1px solid var(--border-color1);
-        box-shadow: var(--shadow1);
-        border-radius: 5px;
-        bottom: calc(100% + 5px);
-        left: 0;
-
-        .btn-light {
-            font-size: 10px;
-            width: 40px;
-            height: 40px;
-        }
-
-    }
-}
-
-
-// Rtl listing details section start
-.rtl {
-
-    .cmn-btn4.share {
-        #shareBlock {
-            right: auto;
-            left: 0;
-        }
-    }
-}
-
-// Rtl listing details section end
-/*----------------------------------------------
-Listing details section end
+Product details section end
 ----------------------------------------------*/
 
-/*----------------------------------------------
-00. Related listing section end
-----------------------------------------------*/
-.related-products-section {
-    overflow: hidden;
-    background-color: var(--bg-color3);
-}
-
-/*----------------------------------------------
-Related listing section end
-----------------------------------------------*/
 
 /*----------------------------------------------
 00. Author section start
@@ -8028,4 +7743,84 @@ Related listing section end
 
 /*----------------------------------------------
 Author section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Banner slider section start
+----------------------------------------------*/
+.banner-slider-section {
+    margin-top: 80px;
+}
+
+.banner-slider {
+    overflow: hidden;
+
+    &:hover {
+        .owl-nav {
+
+            .owl-prev,
+            .owl-next {
+                opacity: 1;
+            }
+
+            .owl-prev {
+                left: 0;
+            }
+
+            .owl-next {
+                right: 0;
+            }
+
+        }
+    }
+
+    .owl-nav {
+
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50% !important;
+            background: rgb(var(--primary-color)) !important;
+            background-size: 200% auto !important;
+            color: rgb(var(--white)) !important;
+            font-size: 20px !important;
+            transition: var(--transition);
+            opacity: 0;
+
+            &:hover {
+                background-position: center right !important;
+            }
+        }
+
+        .owl-prev {
+            left: calc(0% - 25px);
+        }
+
+        .owl-next {
+            right: calc(0% - 25px);
+        }
+
+    }
+
+    .owl-stage-outer {
+        padding: 0;
+    }
+
+    .item {
+        a {
+            cursor: url(../img/cursor/pointer.png), auto;
+
+            img {
+                max-height: 400px;
+            }
+        }
+    }
+}
+
+/*----------------------------------------------
+Banner slider section end
 ----------------------------------------------*/

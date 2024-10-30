@@ -54,28 +54,38 @@ $(document).ready(function () {
         }
     });
 
-    // product-slider carousel
-    $('.payment-carousel').owlCarousel({
+    // banner slider start 
+    $('.banner-slider').owlCarousel({
         loop: true,
         autoplay: true,
-        margin: 30,
-        autoplayTimeout: 2000,
-        // rtl: true,
+        responsiveClass: true,
         dots: false,
-
+        nav: true,
+        navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
+        // rtl: true,
         responsive: {
             0: {
-                items: 3,
+                items: 1,
+                nav: false,
             },
             600: {
-                items: 6,
+                items: 2,
+                nav: false,
             },
-            1000: {
-                items: 10,
-            }
+            768: {
+                nav: true,
+                dots: false,
+                items: 3,
+            },
+            1200: {
+                items: 4,
+                nav: true,
+                dots: false
+            },
+
         }
     });
-
+    // banner slider end
 
 
 
@@ -83,7 +93,10 @@ $(document).ready(function () {
     // cmn select2 start
     $('.cmn-select2').select2();
     // cmn select2 end
-
+    // cmn-select2-modal
+    $(".modal-select").select2({
+        dropdownParent: $("#formModal"),
+    });
     // cmn-select2 with image start
     $('.cmn-select2-image').select2({
         templateResult: formatState,
