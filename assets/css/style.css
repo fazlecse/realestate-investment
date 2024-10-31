@@ -887,7 +887,7 @@ Reusable style section start
   gap: 10px;
   display: flex;
   align-items: center;
-  background-color: rgb(var(--primary-color));
+  background-color: rgb(var(--white));
   border-radius: 5px;
 }
 .cmn-box2 .icon-box {
@@ -4179,7 +4179,7 @@ Hero section end
 Feature section start
 ----------------------------------------------*/
 .feature-section {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
 }
 .feature-section .right-side {
   background-color: var(--bg-color2);
@@ -4227,7 +4227,7 @@ Feature section end
 04. About section start
 ----------------------------------------------*/
 .about-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
   position: relative;
   z-index: 0;
 }
@@ -4278,7 +4278,7 @@ About section end
 00. featured section start
 ----------------------------------------------*/
 .featured-section {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
 }
 
 .property-box {
@@ -4519,7 +4519,7 @@ Faq end
 08. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
   z-index: 0;
   position: relative;
   overflow: hidden;
@@ -4608,7 +4608,7 @@ Testimonial end
 00. latest property section start
 ----------------------------------------------*/
 .latest-property-section {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
 }
 
 @media (min-width: 768px) {
@@ -4633,10 +4633,6 @@ latest property section end
 /*----------------------------------------------
 00. Commission section end
 ----------------------------------------------*/
-.commission-section {
-  background-color: var(--bg-color2);
-}
-
 .working-steps {
   position: relative;
 }
@@ -4798,7 +4794,7 @@ Commission section end
 18. Blog section start
 ----------------------------------------------*/
 .blog-section {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
   z-index: 0;
   position: relative;
 }
@@ -5265,7 +5261,7 @@ Newsletter end
   position: relative;
   z-index: 0;
   padding: 100px 0 50px;
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
   overflow: hidden;
 }
 .footer-section .footer-shape img {
@@ -5533,7 +5529,7 @@ Contact end
   width: 100%;
   height: 450px;
   padding: 5px;
-  background-color: rgb(var(--primary-color));
+  background-color: rgb(var(--white));
   box-shadow: var(--shadow1);
 }
 
@@ -6000,6 +5996,9 @@ Error end
 10. Products section start
 ----------------------------------------------*/
 @media (min-width: 768px) {
+  .products-section {
+    background-color: var(--bg-color2);
+  }
   .products-section .property-box {
     display: flex;
     height: 100%;
@@ -6023,6 +6022,69 @@ Product details section start
 ----------------------------------------------*/
 .product-details-section {
   background-color: var(--bg-color2);
+}
+.product-details-section .map-section iframe {
+  border-radius: 5px;
+  border: 1px solid var(--border-color1) !important;
+}
+
+.investor-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.investor-box .img-box {
+  width: 100px;
+  height: 100px;
+}
+.investor-box .img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.investor-box .meta-list {
+  display: flex;
+  gap: 10px;
+}
+.investor-box .meta-list .meta-list-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.investor-box .meta-list .meta-list-item i {
+  color: rgb(var(--primary-color));
+}
+
+.investor-carousel .owl-nav {
+  position: absolute;
+  right: 0;
+  top: -50px;
+  display: flex;
+  gap: 5px;
+}
+.investor-carousel .owl-nav .owl-prev,
+.investor-carousel .owl-nav .owl-next {
+  width: 30px;
+  height: 30px;
+}
+
+.author-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.author-profile .img-box img {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.review-item {
+  border: 1px solid var(--border-color1);
+  padding: 20px 15px;
+  border-radius: 10px;
 }
 
 .products-header-section {

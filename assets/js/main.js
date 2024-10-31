@@ -87,8 +87,38 @@ $(document).ready(function () {
     });
     // banner slider end
 
+    // banner slider start 
+    $('.investor-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        responsiveClass: true,
+        dots: false,
+        nav: true,
+        navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
+        // rtl: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+            },
+            600: {
+                items: 1,
+                nav: false,
+            },
+            768: {
+                nav: true,
+                dots: false,
+                items: 1,
+            },
+            1200: {
+                items: 1,
+                nav: true,
+                dots: false
+            },
 
-
+        }
+    });
+    // banner slider end
 
     // cmn select2 start
     $('.cmn-select2').select2();
