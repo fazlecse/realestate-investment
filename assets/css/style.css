@@ -1830,15 +1830,20 @@ Alerts end
 /*----------------------------------------------
 Cmn tab2 section start 
 ----------------------------------------------*/
+.cmn-tabs2 .nav-pills {
+  border-bottom: 1px solid var(--border-color2);
+  gap: 10px;
+}
 .cmn-tabs2 .nav-pills .nav-link {
-  color: rgb(var(--primary-color));
-  opacity: 0.5;
-  font-size: 13px;
+  color: rgb(var(--heading-color));
+  font-size: 18px;
+  font-weight: 600;
   transition: var(--transition);
   border-radius: 0;
   border-bottom: 1px solid transparent;
 }
 .cmn-tabs2 .nav-pills .nav-link.active, .cmn-tabs2 .nav-pills .nav-link:hover {
+  color: rgb(var(--primary-color));
   opacity: 1;
   background-color: transparent;
   border-bottom: 1px solid rgb(var(--primary-color));
@@ -4332,15 +4337,15 @@ About section end
 .property-box .img-box .tag-box {
   position: absolute;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   bottom: 0;
-  left: 20px;
-  font-size: 14px;
+  left: 15px;
+  font-size: 12px;
   color: rgb(var(--white));
 }
 .property-box .img-box .tag-box .single-tag {
   background-color: rgb(var(--primary-color));
-  padding: 2px 15px;
+  padding: 2px 10px;
   transform: skew(-15deg);
 }
 .property-box .text-box {
@@ -5625,7 +5630,7 @@ Login Signup end
 25. Blog details section start
 ----------------------------------------------*/
 .blog-details-section {
-  background: var(--bg-color1);
+  background: var(--bg-color2);
 }
 .blog-details-section .blog-box-large .thumbs-area img {
   border-radius: 20px;
@@ -5703,7 +5708,7 @@ Login Signup end
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  background-color: transparent;
+  background-color: var(--bg-color1);
   border-color: var(--border-color1);
   box-shadow: var(--shadow1);
 }
@@ -6028,31 +6033,53 @@ Product details section start
   border: 1px solid var(--border-color1) !important;
 }
 
+.products-header-section {
+  padding: 50px 0;
+}
+.products-header-section .invest-price span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .investor-box {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 .investor-box .img-box {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  min-width: 90px;
+  height: 90px;
 }
 .investor-box .img-box img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.investor-box .meta-list {
+.investor-box .text-box .title {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.meta-list {
   display: flex;
   gap: 10px;
 }
-.investor-box .meta-list .meta-list-item {
+.meta-list .meta-list-item {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
 }
-.investor-box .meta-list .meta-list-item i {
+.meta-list .meta-list-item i {
   color: rgb(var(--primary-color));
 }
 
@@ -6067,6 +6094,7 @@ Product details section start
 .investor-carousel .owl-nav .owl-next {
   width: 30px;
   height: 30px;
+  font-size: 14px !important;
 }
 
 .author-profile {
@@ -6087,12 +6115,38 @@ Product details section start
   border-radius: 10px;
 }
 
-.products-header-section {
-  padding: 50px 0;
+.property-box-sidebar {
+  display: flex;
+  gap: 12px;
 }
-.products-header-section .invest-price span {
+.property-box-sidebar:not(:last-child) {
+  margin-bottom: 20px;
+}
+.property-box-sidebar .img-box {
+  width: 110px;
+  min-width: 110px;
+  height: 80px;
+}
+.property-box-sidebar .img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.property-box-sidebar .text-box .title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+.property-box-sidebar .text-box .price {
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 /*----------------------------------------------
@@ -6187,4 +6241,58 @@ Author section end
 
 /*----------------------------------------------
 Banner slider section end
+----------------------------------------------*/
+/*----------------------------------------------
+Investor profile section start
+----------------------------------------------*/
+.investor-profile-section {
+  background-color: var(--bg-color2);
+}
+.investor-profile-section .sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.investor-profile-box {
+  max-width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.investor-profile-box .img-box img {
+  border-radius: 40px;
+}
+.investor-profile-box .text-box {
+  text-align: center;
+}
+.investor-profile-box .text-box .total-property-count {
+  background-color: rgb(var(--primary-color));
+  display: inline-flex;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  color: rgb(var(--white));
+}
+
+@media (min-width: 768px) {
+  .investor-profile-section {
+    background-color: var(--bg-color2);
+  }
+  .investor-profile-section .property-box {
+    display: flex;
+    height: 100%;
+  }
+  .investor-profile-section .property-box .img-box {
+    width: 40%;
+  }
+  .investor-profile-section .property-box .img-box img {
+    height: 100%;
+  }
+  .investor-profile-section .property-box .text-box {
+    width: 60%;
+    padding: 20px;
+  }
+}
+/*----------------------------------------------
+Investor profile section end
 ----------------------------------------------*/

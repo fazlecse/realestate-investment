@@ -2213,16 +2213,20 @@ Cmn tab2 section start
 ----------------------------------------------*/
 .cmn-tabs2 {
     .nav-pills {
+        border-bottom: 1px solid var(--border-color2);
+        gap: 10px;
+
         .nav-link {
-            color: rgb(var(--primary-color));
-            opacity: .5;
-            font-size: 13px;
+            color: rgb(var(--heading-color));
+            font-size: 18px;
+            font-weight: 600;
             transition: var(--transition);
             border-radius: 0;
             border-bottom: 1px solid transparent;
 
             &.active,
             &:hover {
+                color: rgb(var(--primary-color));
                 opacity: 1;
                 background-color: transparent;
                 border-bottom: 1px solid rgb(var(--primary-color));
@@ -5443,15 +5447,15 @@ About section end
         .tag-box {
             position: absolute;
             display: flex;
-            gap: 15px;
+            gap: 10px;
             bottom: 0;
-            left: 20px;
-            font-size: 14px;
+            left: 15px;
+            font-size: 12px;
             color: rgb(var(--white));
 
             .single-tag {
                 background-color: rgb(var(--primary-color));
-                padding: 2px 15px;
+                padding: 2px 10px;
                 transform: skew(-15deg);
             }
         }
@@ -7157,7 +7161,7 @@ Login Signup end
 25. Blog details section start
 ----------------------------------------------*/
 .blog-details-section {
-    background: var(--bg-color1);
+    background: var(--bg-color2);
 
     .blog-box-large {
         .thumbs-area {
@@ -7252,7 +7256,7 @@ Login Signup end
         align-items: center;
         justify-content: center;
         font-size: 12px;
-        background-color: transparent;
+        background-color: var(--bg-color1);
         border-color: var(--border-color1);
         box-shadow: var(--shadow1);
 
@@ -7691,14 +7695,28 @@ Product details section start
     }
 }
 
+// Products header section start
+.products-header-section {
+    padding: 50px 0;
+
+    .invest-price {
+        span {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}
+
+// Products header section end
 .investor-box {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 
     .img-box {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        min-width: 90px;
+        height: 90px;
 
         img {
             width: 100%;
@@ -7707,23 +7725,39 @@ Product details section start
         }
     }
 
-    .meta-list {
-        display: flex;
-        gap: 10px;
-
-        .meta-list-item {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 5px;
-
-            i {
-                color: rgb(var(--primary-color));
-            }
+    .text-box {
+        .title {
+            margin-bottom: 0;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: var(--heading-font);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
         }
     }
-
 }
+
+.meta-list {
+    display: flex;
+    gap: 10px;
+
+    .meta-list-item {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        i {
+            color: rgb(var(--primary-color));
+        }
+    }
+}
+
+
 
 .investor-carousel {
     .owl-nav {
@@ -7737,6 +7771,7 @@ Product details section start
         .owl-next {
             width: 30px;
             height: 30px;
+            font-size: 14px !important;
         }
     }
 
@@ -7764,19 +7799,47 @@ Product details section start
     border-radius: 10px;
 }
 
-// Products header section start
-.products-header-section {
-    padding: 50px 0;
+.property-box-sidebar {
+    display: flex;
+    gap: 12px;
 
-    .invest-price {
-        span {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .img-box {
+        width: 110px;
+        min-width: 110px;
+        height: 80px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .text-box {
+        .title {
             font-size: 18px;
-            font-weight: 500;
+            font-weight: 700;
+            font-family: var(--heading-font);
+            margin-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
+
+        .price {
+            margin-bottom: 0;
+            margin-top: 5px;
         }
     }
 }
 
-// Products header section end
 
 /*----------------------------------------------
 Product details section end
@@ -7899,4 +7962,77 @@ Author section end
 
 /*----------------------------------------------
 Banner slider section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Investor profile section start
+----------------------------------------------*/
+.investor-profile-section {
+    background-color: var(--bg-color2);
+
+    .sidebar {
+        position: sticky;
+        top: 90px;
+    }
+}
+
+.investor-profile-box {
+    max-width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // border: 1px solid var(--border-color1);
+    // background-color: var(--bg-color1);
+    // box-shadow: var(--shadow1);
+    // padding: 20px;
+    // border-radius: 15px;
+
+    .img-box {
+        img {
+            border-radius: 40px;
+        }
+    }
+
+    .text-box {
+        text-align: center;
+
+        .total-property-count {
+            background-color: rgb(var(--primary-color));
+            display: inline-flex;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            color: rgb(var(--white));
+        }
+    }
+}
+
+// Responsive latest property section start
+@media(min-width: 768px) {
+    .investor-profile-section {
+        background-color: var(--bg-color2);
+
+        .property-box {
+            display: flex;
+            height: 100%;
+
+            .img-box {
+                width: 40%;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .text-box {
+                width: 60%;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+// Responsive latest property section end
+/*----------------------------------------------
+Investor profile section end
 ----------------------------------------------*/
