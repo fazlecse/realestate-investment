@@ -5600,26 +5600,7 @@ Property section end
 17. Faq section start
 ----------------------------------------------*/
 .faq-section {
-    background-color: var(--bg-color1);
-
-    .left-side {
-        .img-box {
-            img {
-                border-radius: 9999px;
-                height: 100%;
-                max-height: 260px;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
-    .cmn-tabs {
-        .nav-pills {
-            justify-content: center;
-        }
-    }
-
+    background-color: var(--bg-color2);
 
     .accordion-button {
         color: var(--heading-color);
@@ -5638,13 +5619,11 @@ Property section end
         }
     }
 
-
     .accordion-item {
         margin: 10px 0;
         border-radius: 10px;
         border: 1px solid var(--border-color1);
     }
-
 
     .accordion-button {
         &::after {
@@ -6948,18 +6927,9 @@ Banner end
 24. Contact section start
 ----------------------------------------------*/
 .contact-section {
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color2);
     position: relative;
     z-index: 0;
-}
-
-.contact-area {
-    padding: 20px;
-
-    .thumbs-area {
-        max-width: 250px;
-        margin: auto;
-    }
 }
 
 .contact-item-list {
@@ -6973,14 +6943,16 @@ Banner end
         align-items: center;
         gap: 15px;
         border: 1px solid var(--border-color1);
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
         box-shadow: var(--shadow1);
+        background-color: rgb(var(--white));
 
         .icon-area {
             border-radius: 5px;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
             font-size: 18px;
             color: rgb(var(--primary-color));
             background-color: rgb(var(--primary-color), 0.1);
@@ -7026,13 +6998,25 @@ Contact end
     iframe {
         margin-bottom: -6px;
         width: 100%;
-        height: 450px;
+        height: 490px;
         padding: 5px;
         background-color: rgb(var(--white));
         box-shadow: var(--shadow1);
+        border-radius: 20px;
+        border: 1px solid var(--border-color1);
     }
 }
 
+// Responsive map section start
+@media(max-width:575px) {
+    .map-section {
+        iframe {
+            height: 250px;
+        }
+    }
+}
+
+// Responsive map section end
 /*----------------------------------------------
 Map section end
 ----------------------------------------------*/
@@ -7043,6 +7027,10 @@ Map section end
 /*----------------------------------------------
 24. Login Signup section start
 ----------------------------------------------*/
+.login-signup-section {
+    background-color: var(--bg-color2);
+}
+
 .login-signup-box {
     border: 1px solid var(--border-color1);
     background-color: var(--bg-color1);

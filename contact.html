@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EstateRise</title>
+    <title>ChainCity</title>
     <!-- Favicon-link -->
     <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
 
@@ -38,7 +38,7 @@
     <!-- Nav section start -->
     <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt="EstateRise"></a>
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt="ChainCity"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <i class="fa-light fa-list"></i>
@@ -46,7 +46,7 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
                 <div class="offcanvas-header">
                     <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
-                            alt="EstateRise"></a>
+                            alt="ChainCity"></a>
                     <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
                             class="fa-light fa-arrow-right"></i></button>
                 </div>
@@ -142,7 +142,7 @@
                     <li class="nav-item">
                         <div class="profile-box">
                             <div class="profile">
-                                <img src="./assets/img/person/1.jpg" class="img-fluid" alt="EstateRise">
+                                <img src="./assets/img/person/1.jpg" class="img-fluid" alt="ChainCity">
                             </div>
                             <ul class="user-dropdown">
                                 <li>
@@ -222,86 +222,81 @@
     <!-- Contact section start -->
     <section class="contact-section">
         <div class="container">
-            <div class="contact-inner">
-                <div class="row g-4">
-                    <div class="col-xl-5 col-lg-6">
-                        <div class="contact-area">
-                            <div class="section-header mb-0">
-                                <h3>Contact Information</h3>
-                            </div>
-                            <p class="para_text">Give us a call or drop by anytime, we endeavour to answer all enquiries
-                                within 24 hours on business days. We will be happy to answer your questions.</p>
-                            <div class="contact-item-list">
-                                <div class="item">
-                                    <div class="icon-area">
-                                        <i class="fa-light fa-phone"></i>
-                                    </div>
-                                    <div class="content-area">
-                                        <h6 class="mb-0">Phone:</h6>
-                                        <p class="mb-0">+45345847431324</p>
-                                    </div>
+            <div class="row g-4 g-xxl-5">
+                <div class="col-lg-6">
+                    <!-- Map section start -->
+                    <div class="map-section">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1668508535036!5m2!1sen!2sbd"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- Map section end -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-message-area">
+                        <div class="contact-header">
+                            <h3 class="section-title">GET IN TOUCH</h3>
+                            <p>Let's Ask Your Questions</p>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name">
                                 </div>
-                                <div class="item">
-                                    <div class="icon-area">
-                                        <i class="fa-light fa-envelope"></i>
-                                    </div>
-                                    <div class="content-area">
-                                        <h6 class="mb-0">Email:</h6>
-                                        <p class="mb-0">demo@example.com</p>
-                                    </div>
+                                <div class="mb-3 col-md-6">
+                                    <input type="email" class="form-control" placeholder="E-mail Address">
                                 </div>
-                                <div class="item">
-                                    <div class="icon-area">
-                                        <i class="fa-light fa-location-dot"></i>
-                                    </div>
-                                    <div class="content-area">
-                                        <h6 class="mb-0">Address:</h6>
-                                        <p class="mb-0">22 Baker Street, London</p>
-                                    </div>
+                                <div class="mb-3 col-md-12">
+                                    <input type="text" class="form-control" placeholder="Your Subject">
+                                </div>
+                                <div class="mb  -3 col-12">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                        placeholder="Your Massage"></textarea>
                                 </div>
                             </div>
-                            <div class="mt-30">
-                                <h5>Socials</h5>
-                                <ul class="social-box mt-10">
-                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                                </ul>
+                            <div class="btn-area d-flex justify-content-end">
+                                <button type="submit" class="cmn-btn w-100"><span>Send a massage</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-area mt-50">
+                <div class="contact-item-list">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="icon-area">
+                                    <i class="fa-light fa-phone"></i>
+                                </div>
+                                <div class="content-area">
+                                    <h6 class="mb-0">Phone:</h6>
+                                    <p class="mb-0">+45345847431324</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-6">
-                        <div class="contact-message-area">
-                            <div class="contact-header">
-                                <h3 class="section-title">We’re always here for you</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia blanditiis
-                                    consequuntur rem, sit itaque impedit. Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Quam consequatur Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Sequi, perferendis?
-
-                                </p>
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="icon-area">
+                                    <i class="fa-light fa-envelope"></i>
+                                </div>
+                                <div class="content-area">
+                                    <h6 class="mb-0">Email:</h6>
+                                    <p class="mb-0">demo@example.com</p>
+                                </div>
                             </div>
-                            <form>
-                                <div class="row">
-                                    <div class="mb-3 col-md-6">
-                                        <input type="text" class="form-control" placeholder="Your Name">
-                                    </div>
-                                    <div class="mb-3 col-md-6">
-                                        <input type="email" class="form-control" placeholder="E-mail Address">
-                                    </div>
-                                    <div class="mb-3 col-md-12">
-                                        <input type="text" class="form-control" placeholder="Your Subject">
-                                    </div>
-                                    <div class="mb  -3 col-12">
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                                            placeholder="Your Massage"></textarea>
-                                    </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="icon-area">
+                                    <i class="fa-light fa-location-dot"></i>
                                 </div>
-                                <div class="btn-area d-flex justify-content-end">
-                                    <button type="submit" class="cmn-btn w-100"><span>Send a massage</span></button>
+                                <div class="content-area">
+                                    <h6 class="mb-0">Address:</h6>
+                                    <p class="mb-0">22 Baker Street, London</p>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -310,13 +305,7 @@
     </section>
     <!-- Contact section end -->
 
-    <!-- Map section start -->
-    <div class="map-section">
-        <iframe class="shadow-none p-0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1668508535036!5m2!1sen!2sbd"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <!-- Map section end -->
+
 
 
     <!-- Footer Section start -->
@@ -330,7 +319,7 @@
                                     alt="chaichity"></a>
                         </div>
                         <p>
-                            Experience the EstateRise Advantage - Empowering Social Success with Advanced, Data-Driven
+                            Experience the ChainCity Advantage - Empowering Social Success with Advanced, Data-Driven
                             Solutions and Innovative Strategies.
                         </p>
 
