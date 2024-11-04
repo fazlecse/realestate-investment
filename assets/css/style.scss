@@ -141,7 +141,7 @@ preloader section start
     align-items: center;
 
     img {
-        max-width: 200px;
+        max-width: 150px;
     }
 }
 
@@ -2063,6 +2063,12 @@ Offcanvas end
         }
     }
 
+}
+
+.rtl {
+    .kew-btn .kew-arrow {
+        transform: rotate(-145deg);
+    }
 }
 
 /*----------------------------------------------
@@ -4617,6 +4623,13 @@ Cmn table end
     border-left: 4px solid rgb(var(--primary-color));
 }
 
+.rtl {
+    .callout {
+        border-left: none;
+        border-right: 4px solid rgb(var(--primary-color));
+    }
+}
+
 // Callout end
 @media(min-width: 1600px) {
     .custom-container {
@@ -5217,11 +5230,16 @@ Bottom Mobile, Tab nav end
     .hero-section {
         padding: 130px 0 50px 0;
 
+        .hero-title {
+            font-size: 42px;
+
+            img {
+                height: 55px;
+                width: 110px;
+            }
+        }
     }
 
-    .hero-title {
-        font-size: 42px;
-    }
 
     .hero-bottom {
         margin-top: 30px;
@@ -5352,26 +5370,18 @@ Feature section end
 // About responsive end
 // Rtl about section start
 .rtl {
-    .about-section {
-        .thumbs-area .about-image {
-            padding-left: 80px;
-            padding-right: 0;
-        }
-    }
-
-    .experience {
-        right: auto;
-        left: 0;
-    }
-
-    @media(max-width: 767px) {
-        .about-section .thumbs-area .about-image {
-            padding-left: 0;
-        }
-
-        .experience {
-            left: 30px;
-        }
+    .about-section::after {
+        position: absolute;
+        content: "";
+        background-image: linear-gradient(rgb(var(--primary-color), 0.4), rgb(var(--primary-color), 0.4)), url(../img/hero/3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: calc(50% - 30px);
+        top: 0;
+        right: 0;
+        left: auto;
+        border-radius: 40px 0 0 40px;
     }
 }
 
@@ -5557,26 +5567,6 @@ About section end
 }
 
 // Responsive property section start
-@media(min-width: 576px) {
-
-    .property-box2 {
-        display: flex;
-        height: 100%;
-
-        .image-area {
-            width: 45%;
-            min-width: 45%;
-
-            img {
-                height: 100%;
-            }
-        }
-
-        .content-area {
-            flex-grow: 1;
-        }
-    }
-}
 
 // Responsive property section end
 
@@ -5586,6 +5576,17 @@ About section end
         .rate-area {
             right: 15px;
             left: auto;
+        }
+
+        .img-box {
+            .tag-box {
+                left: auto;
+                right: 15px;
+
+                .single-tag {
+                    transform: skew(15deg);
+                }
+            }
         }
     }
 }
@@ -5655,11 +5656,8 @@ Property section end
 
 // Faq rtl start
 .rtl {
-
-
     .accordion-button {
         text-align: right;
-        padding: 10px;
 
         &::after {
             margin-right: auto;
@@ -5770,26 +5768,30 @@ Faq end
 
 // Rtl testimonial section start 
 .rtl {
-    @media(min-width: 1400px) {
-        .testimonial-section .left-side .img-box {
-            margin-left: -100px;
-            margin-right: 0;
+    .testimonial-section {
+        &::after {
+            right: auto;
+            left: 0;
+            border-radius: 0 40px 40px 0;
+        }
+
+        .owl-nav {
+            right: auto;
+            left: 0;
+
+            .owl-prev {
+                transform: rotate(-180deg);
+            }
+
+            .owl-next {
+                transform: rotate(-180deg);
+            }
         }
     }
 }
 
 // Rtl testimonial section start 
-// Dark theme testimonial section start
-.dark-theme {
-    .testimonial-section {
-        .testimonial-box {
-            background-color: var(--bg-color1);
-            border-color: var(--bg-color1);
-        }
-    }
-}
 
-// Dark theme testimonial section start
 /*----------------------------------------------
 Testimonial end
 ----------------------------------------------*/
@@ -7652,6 +7654,7 @@ Error end
 
             .img-box {
                 width: 40%;
+                // min-width: 200px;
 
                 img {
                     height: 100%;
@@ -7732,6 +7735,7 @@ Product details section start
 .meta-list {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 
     .meta-list-item {
         display: flex;
@@ -7792,7 +7796,7 @@ Product details section start
     gap: 12px;
 
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .img-box {
@@ -7821,6 +7825,10 @@ Product details section start
             line-clamp: 1;
         }
 
+        .contact-item {
+            font-size: 14px;
+        }
+
         .price {
             margin-bottom: 0;
             margin-top: 5px;
@@ -7828,7 +7836,23 @@ Product details section start
     }
 }
 
+// Rtl product details section start
+.rtl {
+    .investor-carousel .owl-nav {
+        right: auto;
+        left: 0;
 
+        .owl-prev {
+            transform: rotate(180deg);
+        }
+
+        .owl-next {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+// Rtl product details section end
 /*----------------------------------------------
 Product details section end
 ----------------------------------------------*/

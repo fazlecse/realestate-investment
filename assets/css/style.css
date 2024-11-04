@@ -128,7 +128,7 @@ preloader section start
   align-items: center;
 }
 #preloader img {
-  max-width: 200px;
+  max-width: 150px;
 }
 
 /*----------------------------------------------
@@ -1706,6 +1706,10 @@ Offcanvas end
 }
 .kew-btn .kew-arrow .kt-one {
   left: -30px;
+}
+
+.rtl .kew-btn .kew-arrow {
+  transform: rotate(-145deg);
 }
 
 /*----------------------------------------------
@@ -3651,6 +3655,11 @@ Cmn table end
   border-left: 4px solid rgb(var(--primary-color));
 }
 
+.rtl .callout {
+  border-left: none;
+  border-right: 4px solid rgb(var(--primary-color));
+}
+
 @media (min-width: 1600px) {
   .custom-container {
     max-width: 1530px;
@@ -4161,8 +4170,12 @@ Bottom Mobile, Tab nav end
   .hero-section {
     padding: 130px 0 50px 0;
   }
-  .hero-title {
+  .hero-section .hero-title {
     font-size: 42px;
+  }
+  .hero-section .hero-title img {
+    height: 55px;
+    width: 110px;
   }
   .hero-bottom {
     margin-top: 30px;
@@ -4259,21 +4272,18 @@ Feature section end
     display: none;
   }
 }
-.rtl .about-section .thumbs-area .about-image {
-  padding-left: 80px;
-  padding-right: 0;
-}
-.rtl .experience {
-  right: auto;
-  left: 0;
-}
-@media (max-width: 767px) {
-  .rtl .about-section .thumbs-area .about-image {
-    padding-left: 0;
-  }
-  .rtl .experience {
-    left: 30px;
-  }
+.rtl .about-section::after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(rgb(var(--primary-color), 0.4), rgb(var(--primary-color), 0.4)), url(../img/hero/3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: calc(50% - 30px);
+  top: 0;
+  right: 0;
+  left: auto;
+  border-radius: 40px 0 0 40px;
 }
 
 /*----------------------------------------------
@@ -4427,25 +4437,16 @@ About section end
   padding: 6px 20px;
 }
 
-@media (min-width: 576px) {
-  .property-box2 {
-    display: flex;
-    height: 100%;
-  }
-  .property-box2 .image-area {
-    width: 45%;
-    min-width: 45%;
-  }
-  .property-box2 .image-area img {
-    height: 100%;
-  }
-  .property-box2 .content-area {
-    flex-grow: 1;
-  }
-}
 .rtl .property-box .rate-area {
   right: 15px;
   left: auto;
+}
+.rtl .property-box .img-box .tag-box {
+  left: auto;
+  right: 15px;
+}
+.rtl .property-box .img-box .tag-box .single-tag {
+  transform: skew(15deg);
 }
 
 /*----------------------------------------------
@@ -4499,7 +4500,6 @@ Property section end
 
 .rtl .accordion-button {
   text-align: right;
-  padding: 10px;
 }
 .rtl .accordion-button::after {
   margin-right: auto;
@@ -4583,16 +4583,20 @@ Faq end
     justify-content: center;
   }
 }
-@media (min-width: 1400px) {
-  .rtl .testimonial-section .left-side .img-box {
-    margin-left: -100px;
-    margin-right: 0;
-  }
+.rtl .testimonial-section::after {
+  right: auto;
+  left: 0;
+  border-radius: 0 40px 40px 0;
 }
-
-.dark-theme .testimonial-section .testimonial-box {
-  background-color: var(--bg-color1);
-  border-color: var(--bg-color1);
+.rtl .testimonial-section .owl-nav {
+  right: auto;
+  left: 0;
+}
+.rtl .testimonial-section .owl-nav .owl-prev {
+  transform: rotate(-180deg);
+}
+.rtl .testimonial-section .owl-nav .owl-next {
+  transform: rotate(-180deg);
 }
 
 /*----------------------------------------------
@@ -6066,6 +6070,7 @@ Product details section start
 .meta-list {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .meta-list .meta-list-item {
   display: flex;
@@ -6114,7 +6119,7 @@ Product details section start
   gap: 12px;
 }
 .property-box-sidebar:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .property-box-sidebar .img-box {
   width: 110px;
@@ -6138,9 +6143,23 @@ Product details section start
   -webkit-line-clamp: 1;
   line-clamp: 1;
 }
+.property-box-sidebar .text-box .contact-item {
+  font-size: 14px;
+}
 .property-box-sidebar .text-box .price {
   margin-bottom: 0;
   margin-top: 5px;
+}
+
+.rtl .investor-carousel .owl-nav {
+  right: auto;
+  left: 0;
+}
+.rtl .investor-carousel .owl-nav .owl-prev {
+  transform: rotate(180deg);
+}
+.rtl .investor-carousel .owl-nav .owl-next {
+  transform: rotate(180deg);
 }
 
 /*----------------------------------------------
