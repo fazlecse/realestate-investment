@@ -128,7 +128,8 @@ preloader section start
   align-items: center;
 }
 #preloader img {
-  max-width: 150px;
+  max-width: 100px;
+  animation: jump 2s linear infinite alternate;
 }
 
 /*----------------------------------------------
@@ -1450,15 +1451,11 @@ Offcanvas end
   gap: 5px;
   font-weight: 500;
   text-transform: capitalize;
-  font-family: var(--heading-font);
   color: rgb(var(--primary-color));
 }
 .cmn-btn2:hover {
   color: rgb(var(--primary-color));
   box-shadow: var(--shadow1);
-}
-.cmn-btn2 i {
-  margin-bottom: 3px;
 }
 
 .cmn-btn3 {
@@ -1507,20 +1504,24 @@ Offcanvas end
 
 .login-btn {
   display: flex;
-  padding: 8px 16px;
+  align-items: center;
+  padding: 7px 18px;
   text-transform: capitalize;
   transition: var(--transition);
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
   background: rgb(var(--primary-color));
-  border-radius: 5px;
+  border-radius: 9999px;
   font-family: var(--heading-font);
   gap: 5px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
 }
 .login-btn:hover {
-  background: var(--btn-hover-bg);
-  color: rgb(var(--primary-color));
+  background-color: rgb(var(--primary-color), 0.8);
+  color: rgb(var(--white));
+}
+.login-btn i {
+  padding-bottom: 4px;
 }
 
 @media (max-width: 767px) {
@@ -3515,7 +3516,7 @@ Cmn table end
     transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -40px, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);

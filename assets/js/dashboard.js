@@ -1,4 +1,5 @@
 "use strict";
+
 // Preloader area
 const preloader = document.getElementById("preloader");
 const preloaderFunction = () => {

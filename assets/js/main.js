@@ -1,6 +1,6 @@
 "use strict";
-// Preloader area
 
+// Preloader area
 const preloaderFunction = () => {
     document.getElementById("preloader").style.display = "none";
 };
