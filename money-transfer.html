@@ -202,22 +202,24 @@
         <!-- Header section start -->
 
         <!-- Bottom Mobile Tab nav section start -->
-        <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <ul class="nav bottom-nav fixed-bottom d-xl-none">
             <li class="nav-item">
-                <a class="nav-link toggle-sidebar-btn" aria-current="page"><i class="fa-light fa-list"></i></a>
+                <a class="nav-link  toggle-sidebar-btn" aria-current="page">
+                    <i class="fa-regular fa-list"></i>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+                <a class="nav-link" href="#"><i class="fa-regular fa-planet-ringed"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#"><i class="fa-light fa-house"></i></a>
+                <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
             </li>
             <li class="nav-item">
                 <a onclick="searchBar()" class="nav-link search-bar-toggle" href="#"><i
                         class="fa-regular fa-magnifying-glass"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+                <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
             </li>
         </ul>
         <!-- Bottom Mobile Tab nav section end -->
@@ -351,64 +353,47 @@
         <main id="main" class="main bg-color2">
             <div class="main-wrapper">
                 <div class="pagetitle">
-                    <h3 class="mb-1">mass order</h3>
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">mass order</li>
+                            <li class="breadcrumb-item active">Balance transfer</li>
                         </ol>
                     </nav>
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-6">
+                    <div class="col-lg-8">
                         <div class="card">
-                            <div class="card-header">
-                                <h4>mass order</h4>
-                            </div>
                             <div class="card-body">
                                 <div class="row g-3">
                                     <div class="col-12">
-                                        <label for="Description" class="form-label">One order per line in format</label>
-                                        <textarea class="form-control" id="Description" rows="12"
-                                            placeholder="service_id | link | quantity"></textarea>
+                                        <label for="Receiver-Email-Address" class="form-label">Receiver Email
+                                            Address</label>
+                                        <input type="number" class="form-control" id="Receiver-Email-Address"
+                                            placeholder="Enter email address">
                                     </div>
-                                    <a href="" class="cmn-btn mt-30">save changes</a>
+                                    <div class="col-12">
+                                        <label for="Amount" class="form-label">Amount</label>
+                                        <input type="number" class="form-control" id="Amount"
+                                            placeholder="Enter amount">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Select Wallet</label>
+                                        <select class="cmn-select2" name="state">
+                                            <option value="0" hidden>Select Wallet</option>
+                                            <option value="1">Main balance
+                                            </option>
+                                            <option value="2">Internet balance</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="Enter-Password" class="form-label">Enter Password</label>
+                                        <input type="number" class="form-control" id="Enter-Password"
+                                            placeholder="Enter password">
+                                    </div>
+                                    <div>
+                                        <a href="" class="cmn-btn5 mt-30">Transfer</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>How Mass Order works?</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="mb-0">You put the service ID followed by | followed by the link followed by |
-                                    followed
-                                    by quantity on each line To get the service ID of a service please check here:</p>
-                                <br>
-                                <a href="" class="link">https://ChainCity.com/services</a>
-                                <p class="mb-0">Let’s say you want to use the Mass Order to add Instagram Followers to
-                                    your
-                                    3
-                                    accounts: abcd, asdf, qwer</p>
-                                <br>
-                                <p class="mb-0">From the Services List, the service ID for this service “[Instagram
-                                    Followers
-                                    [100% Real - 30 Days Guarantee- NEW SERVICE” is 3740</p>
-                                <br>
-                                <p class="mb-0">Let’s say you want to add 1000 followers for each account, the output
-                                    will
-                                    be
-                                    like this: ID|Link|Quantity</p>
-                                <br>
-                                <p>or in this example:</p>
-                                <ul>
-                                    <li>3740|abcd|1000</li>
-                                    <li>3740|abcd|1000</li>
-                                    <li>3740|abcd|1000</li>
-                                    <li>3740|abcd|1000</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -494,6 +479,22 @@
     <!-- Modal section end -->
 
 
+
+
+    <script>
+        // Copy api key
+        document.getElementById("copyBtn").addEventListener("click", () => {
+            let referralURL = document.getElementById("referralURL");
+            referralURL.select();
+            navigator.clipboard.writeText(referralURL.value)
+            if (referralURL.value) {
+                document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-circle-check"></i> Copied';
+                setTimeout(() => {
+                    document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-copy"></i>copy';
+                }, 1000)
+            }
+        })
+    </script>
 
 
 

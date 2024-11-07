@@ -15,27 +15,6 @@ document.querySelectorAll('.toggle-sidebar-btn').forEach(button => {
 });
 // Toggle sidebar end
 
-// // Toggle sidebar start
-// // Toggle sidebar visibility
-// document.querySelectorAll('.toggle-sidebar-btn').forEach(button => {
-//     button.addEventListener('click', (event) => {
-//         event.stopPropagation(); // Prevent the click from propagating to the document
-//         document.body.classList.toggle("toggle-sidebar");
-//     });
-// });
-
-// // Hide sidebar when clicking outside of it
-// document.addEventListener('click', (event) => {
-//     const sidebar = document.querySelector('.sidebar');
-//     const toggleButton = document.querySelector('.toggle-sidebar-btn');
-
-//     // Check if the click is outside the sidebar and the toggle button
-//     if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
-//         document.body.classList.remove("toggle-sidebar");
-//     }
-// });
-// // Toggle sidebar end
-
 
 
 // Tooltip
@@ -296,8 +275,6 @@ $(document).ready(function () {
             radius: '5px',
         });
     }
-
-
 
     // Line progressbar end
 

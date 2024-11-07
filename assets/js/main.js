@@ -273,6 +273,7 @@ $(document).ready(function () {
             time: 2000
         });
     }
+    
     AOS.init();
 
     // Round button animation

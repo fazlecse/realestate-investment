@@ -349,19 +349,30 @@
         </aside>
         <!-- Sidebar section end -->
 
+        <!-- Main section start -->
         <main id="main" class="main bg-color2">
             <div class="main-wrapper">
                 <div class="pagetitle">
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">transactions</li>
+                            <li class="breadcrumb-item active">My Referral</li>
                         </ol>
                     </nav>
                 </div>
-
-                <!-- Cmn table section start -->
                 <div class="card">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input id="referralURL" type="text" class="form-control"
+                                value="https://dodger-blue-hyip.bugfinder.net/register/demouser"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                            <div class="input-group-text" id="copyBtn"><i class="fa-regular fa-copy"></i>copy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cmn table section start -->
+                <div class="card mt-25">
                     <div class="card-header d-flex justify-content-between pb-0 border-0">
                         <h4>Fund History</h4>
                         <div class="btn-area">
@@ -601,95 +612,14 @@
                     </div>
                 </div>
                 <!-- Cmn table section end -->
-
-                <!-- transactions section start -->
-                <div class="transactions-section mt-50">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Send money</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="row g-4">
-                                            <div class="col-12">
-                                                <div>
-                                                    <label for="Recipient-email-or-username"
-                                                        class="form-label">Recipient
-                                                        email
-                                                        or username </label>
-                                                    <input type="text" class="form-control"
-                                                        id="Recipient-email-or-username">
-                                                    <div class="form-text">User found. Are you looking for Lucky
-                                                        Imuesili?
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <label for="currency" class="form-label">currency</label>
-                                                    <input type="text" class="form-control" id="currency">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <label for="Amount" class="form-label">Amount</label>
-                                                    <input type="text" class="form-control" id="Amount">
-                                                    <div class="form-text">Remaining balance: 342342.14</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        id="flexSwitchCheckDefault2">
-                                                    <label class="form-check-label"
-                                                        for="flexSwitchCheckDefault2">Receiver
-                                                        will
-                                                        pay the txt charge</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div>
-                                                    <label for="exampleFormControlTextarea1"
-                                                        class="form-label">Note</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                        rows="2"></textarea>
-                                                </div>
-                                            </div>
-
-                                            <div class="btn-area">
-                                                <button type="submit" class="cmn-btn w-100">send money</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="section-header">
-                                <h5>transaction Details</h5>
-                            </div>
-                            <ul class="list-area">
-                                <li><span>Available balance</span> <span>2544.14 USD</span></li>
-                                <li><span>Transfer charge</span> <span>0.15 + 1 = 1.15 USD</span></li>
-                                <li><span>payable amount</span> <span>14.15 USD</span></li>
-                                <li><span>receiver will receive</span> <span>10 USD</span></li>
-                                <li><span>remeining balance</span> <span>55456.11 USD</span></li>
-                                <li><span>min request limit</span> <span>1.00 USD</span></li>
-                                <li><span>max request limit</span> <span>500.00 USD</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- transactions section end -->
             </div>
-
         </main>
-
-
-
+        <!-- Main section start -->
     </div>
+
+
+
+
 
     <!-- Offcanvas sidebar start -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -762,6 +692,22 @@
     <!-- Modal section end -->
 
 
+
+
+    <script>
+        // Copy api key
+        document.getElementById("copyBtn").addEventListener("click", () => {
+            let referralURL = document.getElementById("referralURL");
+            referralURL.select();
+            navigator.clipboard.writeText(referralURL.value)
+            if (referralURL.value) {
+                document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-circle-check"></i> Copied';
+                setTimeout(() => {
+                    document.getElementById("copyBtn").innerHTML = '<i class="fa-regular fa-copy"></i>copy';
+                }, 1000)
+            }
+        })
+    </script>
 
 
 

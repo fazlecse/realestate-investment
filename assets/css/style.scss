@@ -2751,6 +2751,7 @@ hr.divider:after {
 
 // Rtl cmn list section end
 // Cmn list section end
+
 // Cmn list2 section start
 .cmn-list2 {
     display: flex;
@@ -2784,8 +2785,6 @@ hr.divider:after {
         opacity: 1;
     }
 }
-
-
 // Reviews section end
 
 // Ratings section start
@@ -5487,6 +5486,7 @@ About section end
             font-size: 20px;
             font-weight: 600;
             font-family: var(--heading-font);
+            color: rgb(var(--heading-color));
         }
 
         .address {

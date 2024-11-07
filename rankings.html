@@ -39,6 +39,7 @@
         <!-- Header section start -->
         <header id="header" class="header">
             <button class="toggle-sidebar-btn d-none d-xl-block"><i class="fa-light fa-list"></i></button>
+            <!-- End Logo -->
 
             <div class="search-bar">
                 <form class="search-form d-flex align-items-center" method="POST" action="#">
@@ -46,8 +47,7 @@
                         title="Enter search keyword">
                     <span class="search-icon" title="Search"><i class="fa-regular fa-magnifying-glass"></i></span>
                 </form>
-            </div>
-            <!-- End Search Bar -->
+            </div><!-- End Search Bar -->
 
             <!-- Start Icons Navigation -->
             <nav class="header-nav ms-auto">
@@ -349,198 +349,350 @@
         </aside>
         <!-- Sidebar section end -->
 
+        <!-- Main section start -->
         <main id="main" class="main bg-color2">
             <div class="main-wrapper">
-                <h3 class="mb-1">Profile</h3>
-                <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active">Profile</li>
-                    </ol>
-                </nav>
-            </div>
-            <!-- End Page Title -->
-            <!-- Left side columns -->
-
-            <div class="row">
-                <!-- Account-settings -->
-                <!-- Account settings navbar start -->
-                <div class="account-settings-navbar">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="account-settings-profile.html"><i
-                                    class="fa-regular fa-user"></i>profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-settings-notifications.html"><i
-                                    class="fa-regular fa-link"></i>Notification</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-settings-identity-verification.html"><i
-                                    class="fa-regular fa-link"></i> Identity Verification</a>
-                        </li>
-                    </ul>
+                <div class="pagetitle">
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">add fund</li>
+                        </ol>
+                    </nav>
                 </div>
-                <!-- Account settings navbar end -->
-                <form>
-                    <div class="account-settings-profile-section">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">Profile Details
-                                </h5>
-                                <div class="profile-details-section">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <div class="image-area">
-                                            <img id="profile-img" src="assets/img/person/1.jpg" alt="ChainCity">
-                                        </div>
-                                        <div class="btn-area">
-                                            <div class="btn-area-inner d-flex">
-                                                <div class="cmn-file-input">
-                                                    <label for="formFile" class="form-label">Upload New
-                                                        Photo</label>
-                                                    <input class="form-control" type="file" id="formFile"
-                                                        onchange="previewImage('profile-img')">
-                                                </div>
-                                                <button type="button" class="cmn-btn3"
-                                                    onclick="resetPreviewImage()">reset</button>
-                                            </div>
-                                            <small>Allowed JPG, GIF or PNG. Max size of 800K</small>
-                                        </div>
+
+                <div class="row g-4">
+                    <div class="col-xxl-4 col-sm-6 card-item">
+                        <div class="box-card">
+                            <div class="icon-box">
+                                <i class="fa-regular fa-trophy"></i>
+                            </div>
+                            <div class="text-box">
+                                <p class="mb-1">Current Rank</p>
+                                <h4>Agent</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 card-item">
+                        <div class="box-card">
+                            <div class="icon-box">
+                                <i class="fa-sharp fa-regular fa-hands-holding-dollar"></i>
+                            </div>
+                            <div class="text-box">
+                                <p class="mb-1">Total Invest</p>
+                                <h4>$245325</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-sm-6 card-item">
+                        <div class="box-card">
+                            <div class="icon-box">
+                                <i class="fa-regular fa-circle-dollar"></i>
+                            </div>
+                            <div class="text-box">
+                                <p class="mb-1">Total Payout</p>
+                                <h4>$5900</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-30">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/1.png" alt="">
+                                    </div>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 1</p>
+                                        <h4 class="mb-0">Member</h4>
                                     </div>
                                 </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$100.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-check-double"></i>
+                                </div>
                             </div>
-                            <div class="card-body pt-0">
-
-                                <div class="profile-form-section">
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label for="firstname" class="form-label">First Name</label>
-                                            <input type="text" class="form-control" id="firstname">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="lastname" class="form-label">last name</label>
-                                            <input type="text" class="form-control" id="lastname">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="e-mail" class="form-label">e-mail</label>
-                                            <input type="email" class="form-control" id="e-mail">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="organization" class="form-label">organization</label>
-                                            <input type="text" class="form-control" id="organization">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="phonenumber" class="form-label">phone number</label>
-                                            <input type="text" class="form-control" id="phonenumber"
-                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="address" class="form-label">address</label>
-                                            <input type="text" class="form-control" id="address">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="state" class="form-label">state</label>
-                                            <input type="text" class="form-control" id="state">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="zipcode" class="form-label">zip code</label>
-                                            <input type="text" class="form-control" id="zipcode">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">country</label>
-                                            <select class="cmn-select2" name="state">
-                                                <option value="AL">Select</option>
-                                                <option value="AL">Bangladesh</option>
-                                                <option value="WY">Australia</option>
-                                                <option value="WY">Belarus</option>
-                                                <option value="WY">Canada</option>
-                                                <option value="WY">China</option>
-                                                <option value="WY">France</option>
-                                                <option value="WY">Germany</option>
-                                                <option value="WY">India</option>
-                                                <option value="WY">Indonesia</option>
-                                                <option value="WY">Italy</option>
-                                                <option value="WY">Japan</option>
-                                                <option value="WY">Korea</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">language</label>
-                                            <select class="cmn-select2" name="state">
-                                                <option value="AL">Select Language</option>
-                                                <option value="AL">Bangla</option>
-                                                <option value="WY">English</option>
-                                                <option value="WY">French</option>
-                                                <option value="WY">German</option>
-                                                <option value="WY">China</option>
-                                                <option value="WY">France</option>
-                                                <option value="WY">Germany</option>
-                                                <option value="WY">India</option>
-                                                <option value="WY">Indonesia</option>
-                                                <option value="WY">Italy</option>
-                                                <option value="WY">Japan</option>
-                                                <option value="WY">Korea</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Time zone</label>
-                                            <select class="cmn-select2" name="state">
-                                                <option value="AL">Select Timezone</option>
-                                                <option value="WY">(GMT-12:00) International Date Line West</option>
-                                                <option value="WY">(GMT-11:00) Midway Island, Samoa</option>
-                                                <option value="WY">(GMT-10:00) Hawaii</option>
-                                                <option value="WY">(GMT-09:00) Alaska</option>
-                                                <option value="WY">(GMT-08:00) Pacific Time (US & Canada)</option>
-                                                <option value="WY">(GMT-08:00) Tijuana, Baja California</option>
-                                                <option value="WY">(GMT-07:00) Arizona</option>
-                                                <option value="WY">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                                                <option value="WY">(GMT-07:00) Mountain Time (US & Canada)</option>
-                                                <option value="WY">(GMT-06:00) Central America</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">currency</label>
-                                            <select class="cmn-select2" name="state">
-                                                <option value="AL">Select Currency</option>
-                                                <option value="WY">BDT</option>
-                                                <option value="WY">USD</option>
-                                                <option value="WY">Euro</option>
-                                                <option value="WY">Pound</option>
-                                                <option value="WY">bitcoin</option>
-                                            </select>
-                                        </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/2.png" alt="">
                                     </div>
-                                    <div class="btn-area d-flex g-3">
-                                        <button type="button" class="cmn-btn">save changes</button>
-                                        <button type="button" class="cmn-btn3">cancel</button>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 2</p>
+                                        <h4 class="mb-0">Leader</h4>
                                     </div>
-
+                                </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$109.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-check-double"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/3.png" alt="">
+                                    </div>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 3</p>
+                                        <h4 class="mb-0">Captain</h4>
+                                    </div>
+                                </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$109.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-check-double"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box locked">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/4.png" alt="">
+                                    </div>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 4</p>
+                                        <h4 class="mb-0">Victor</h4>
+                                    </div>
+                                </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$109.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box locked">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/1.png" alt="">
+                                    </div>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 1</p>
+                                        <h4 class="mb-0">Member</h4>
+                                    </div>
+                                </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$100.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box locked">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/2.png" alt="">
+                                    </div>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 2</p>
+                                        <h4 class="mb-0">Leader</h4>
+                                    </div>
+                                </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$109.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box locked">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/3.png" alt="">
+                                    </div>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 3</p>
+                                        <h4 class="mb-0">Captain</h4>
+                                    </div>
+                                </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$109.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="ranking-box locked">
+                                <div class="box-top">
+                                    <div class="img-box">
+                                        <img src="./assets/img/badge/4.png" alt="">
+                                    </div>
+                                    <div class="img-text">
+                                        <p class="mb-0">Level 4</p>
+                                        <h4 class="mb-0">Victor</h4>
+                                    </div>
+                                </div>
+                                <div class="box-bottom">
+                                    <h6 class="mb-0">Minimum Personal Invest:</h6>
+                                    <h5 class="mb-1">$5000.00</h5>
+                                    <h6 class="mb-0">Minimum Personal Deposit:</h6>
+                                    <h5 class="mb-1">$10000.00</h5>
+                                    <h6 class="mb-0">Minimum Earning:</h6>
+                                    <h5 class="mb-1">$1000.00</h5>
+                                    <h6 class="mb-0">Bonus to receive:</h6>
+                                    <h5 class="bonus-receive">$109.00</h5>
+                                </div>
+                                <div class="lock-icon">
+                                    <i class="fa-regular fa-lock"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
-
+                </div>
             </div>
-
+        </main>
+        <!-- Main section start -->
     </div>
-    </main>
+
+
+
+
+
+    <!-- Offcanvas sidebar start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-light fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="row g-4">
+                    <div>
+                        <label for="ProductName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="ProductName">
+                    </div>
+                    <div>
+                        <label for="NumberOfSales" class="form-label">Number of sales</label>
+                        <input type="text" class="form-control" id="NumberOfSales">
+                    </div>
+                    <div id="formModal">
+                        <label class="form-label">status</label>
+                        <select class="modal-select" name="state">
+                            <option value="AL">All status</option>
+                            <option value="AL">Bangladesh</option>
+                            <option value="WY">Australia</option>
+                            <option value="WY">Belarus</option>
+                            <option value="WY">Canada</option>
+                            <option value="WY">China</option>
+                            <option value="WY">France</option>
+                            <option value="WY">Germany</option>
+                            <option value="WY">India</option>
+                            <option value="WY">Indonesia</option>
+                            <option value="WY">Italy</option>
+                            <option value="WY">Japan</option>
+                            <option value="WY">Korea</option>
+                        </select>
+                    </div>
+                    <div class="btn-area">
+                        <button type="submit" class="cmn-btn">Filter</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
+    <!-- Offcanvas sidebar end -->
+
+    <!-- Modal section start -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Modal body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section end -->
 
 
 
-    <script>
-        // input file preview & reset start
-        const originalImageSrc = document.getElementById('profile-img').src;
-        const previewImage = (id) => {
-            document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);
-        };
-        const resetPreviewImage = () => {
-            document.getElementById('profile-img').src = originalImageSrc;
-        }
 
-        // input file preview & reset end
-    </script>
+
+
+
 
 
 

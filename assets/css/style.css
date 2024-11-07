@@ -4374,6 +4374,7 @@ About section end
   font-size: 20px;
   font-weight: 600;
   font-family: var(--heading-font);
+  color: rgb(var(--heading-color));
 }
 .property-box .text-box .address {
   font-size: 14px;

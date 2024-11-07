@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChainCity</title>
-    <!-- Favicon-link -->
+    <title>ChainCity Dashboard</title>
+    <!-- Favicon link -->
     <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
     <!-- Fontawesome-6 Js link -->
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -202,9 +202,9 @@
         <!-- Header section start -->
 
         <!-- Bottom Mobile Tab nav section start -->
-        <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <ul class="nav bottom-nav fixed-bottom d-xl-none">
             <li class="nav-item">
-                <a class="nav-link toggle-sidebar-btn" aria-current="page">
+                <a class="nav-link  toggle-sidebar-btn" aria-current="page">
                     <i class="fa-regular fa-list"></i>
                 </a>
             </li>
@@ -349,294 +349,241 @@
         </aside>
         <!-- Sidebar section end -->
 
-        <main id="main" class="main">
+
+        <!-- Main section start -->
+        <main id="main" class="main bg-color2">
             <div class="main-wrapper">
-                <!-- Page title start -->
                 <div class="pagetitle">
-                    <h3 class="mb-1">Listings</h3>
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">Listings</li>
+                            <li class="breadcrumb-item active">conversation</li>
                         </ol>
                     </nav>
                 </div>
-                <!-- Page title end -->
 
-                <!-- Cmn table section start -->
-                <div class="card mt-50">
-                    <div
-                        class="card-header d-flex justify-content-between align-items-center border-0 flex-wrap gap-3 pb-0">
-                        <h4 class="mb-0">My listing</h4>
-                        <div class="btn-area gap-3 d-flex">
-                            <button type="button" class="cmn-btn" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Filter<i
-                                    class="fa-regular fa-filter"></i>
-                            </button>
-                            <button type="button" class="cmn-btn3" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"><i class="fa-regular fa-plus"></i> add listing
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="cmn-table">
-                            <div class="table-responsive overflow-hidden">
-                                <table class="table table-striped align-middle">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Transaction ID</th>
-                                            <th scope="col">Gateway</th>
-                                            <th scope="col">Amount</th>
-                                            <th scope="col">Charge</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Time & Date</th>
-                                            <th scope="col">action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-primary">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-secondary">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-success">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-danger">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-warning">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action"><button type="button" class="action-btn-primary"
-                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                                        class="fa-regular fa-pen-to-square"></i></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-info">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action">
-                                                <button type="button" class="action-btn-primary" data-bs-toggle="modal"
-                                                    data-bs-target="#staticBackdrop"><i
-                                                        class="fa-regular fa-pen-to-square"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-dark">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action"><button type="button" class="action-btn-primary"
-                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                                        class="fa-regular fa-pen-to-square"></i></button></td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="client-question-box">
+                            <div class="img-box">
+                                <img src="./assets/img/conversation/question.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h6>This product is good. Have you agreed to my offer?</h5>
                             </div>
                         </div>
+                        <!-- Chat section start -->
+                        <form action="">
+                            <div class="message-container mt-15">
+                                <div class="chat-box m-2">
+                                    <div class="header-section">
+                                        <div class="profile-info">
+                                            <div class="thumbs-area">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="content-area">
+                                                <div class="title">Alen donald</div>
+                                                <div class="description">Motivation speeker</div>
+                                            </div>
+                                        </div>
+                                        <div class="single-btn-box d-flex justify-content-sm-end ">
+                                            <div class="dropdown">
+                                                <button class="single-btn" type="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">save</a></li>
+                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#apply-modal">apply</a></li>
+                                                    <li><a class="dropdown-item" href="#">copy link</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">report</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-box-inner">
+                                        <div class="message-bubble message-bubble-left">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet.</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-right">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet.</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-left">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet, consectetur
+                                                adipisicing elit. Facere, sunt.</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-right">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet consectetur,
+                                                adipisicing elit. Tenetur, voluptate!</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-left">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing
+                                                elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam.
+                                                Velit
+                                                doloremque sunt, excepturi placeat quae quas eligendi commodi
+                                                nemo
+                                                obcaecati iure ipsum ipsa. Officia?</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-right">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing
+                                                elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam.
+                                                Velit
+                                                doloremque sunt, excepturi placeat quae quas eligendi commodi
+                                                nemo
+                                                obcaecati iure ipsum ipsa. Officia?</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-left">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing
+                                                elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam.
+                                                Velit
+                                                doloremque sunt, excepturi placeat quae quas eligendi commodi
+                                                nemo
+                                                obcaecati iure ipsum ipsa. Officia?</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-right">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing
+                                                elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam.
+                                                Velit
+                                                doloremque sunt, excepturi placeat quae quas eligendi commodi
+                                                nemo
+                                                obcaecati iure ipsum ipsa. Officia?</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-left">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing
+                                                elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam.
+                                                Velit
+                                                doloremque sunt, excepturi placeat quae quas eligendi commodi
+                                                nemo
+                                                obcaecati iure ipsum ipsa. Officia?</div>
+                                        </div>
+                                        <div class="message-bubble message-bubble-right">
+                                            <div class="message-thumbs">
+                                                <img src="assets/img/person/1.jpg" alt="ChainCity">
+                                            </div>
+                                            <div class="message-text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing
+                                                elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam.
+                                                Velit
+                                                doloremque sunt, excepturi placeat quae quas eligendi commodi
+                                                nemo
+                                                obcaecati iure ipsum ipsa. Officia?</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="chat-box-bottom">
+                                        <div class="cmn-btn-group2 d-flex justify-content-sm-end ">
+                                            <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="Attached file" class="single-btn2">
+                                                <i class="fa-regular fa-paperclip"></i>
+                                            </button>
+
+                                        </div>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="3"></textarea>
+                                        <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-title="Send" class="message-send-btn"><i
+                                                class="fa-thin fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        <!-- Chat section end -->
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="widget-title">Offer Information</h4>
+                                <div class="offer-property-box">
+                                    <a href="" class="img-box">
+                                        <img src="./assets/img/products/house/1.jpg" alt="">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <h6 class="text-nowrap">Property :</h6>
+                                            <h6><a href="" class="link">Elegant Family Home</a></h6>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 mt-2">
+                                            <h6>Offer Amount :</h6>
+                                            <h5 class="mb-0">$100.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mt-25">
+                            <div class="card-body">
+                                <h4 class="widget-title">Owner Information</h4>
+                                <div class="owner-box">
+                                    <div class="img-box">
+                                        <img src="./assets/img/person/15.jpg" alt="">
+                                    </div>
+                                    <div class="text-box">
+                                        <h5 class="mb-0">Holly E. Kelly</h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mt-20">
+                                    <h6 class="text-nowrap">Phone :</h6>
+                                    <p class="mb-0">+919090909091</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <h6 class="text-nowrap">Email :</h6>
+                                    <p class="mb-0">abcd1221@ggmail.com</p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <h6 class="text-nowrap">Address :</h6>
+                                    <p class="mb-0">Est 0235 Park Street, New York</p>
+                                </div>
+                                <a href="" class="cmn-btn5 mt-20">view profile</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <!-- Cmn table section end -->
 
-                <!-- pagination section start -->
-                <div class="pagination-section">
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active" aria-current="page">
-                                <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- pagination section end -->
             </div>
-
-
         </main>
+        <!-- Main section start -->
+
+
 
     </div>
-
-
 
 
 
@@ -696,39 +643,27 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="staticBackdropLabel">Create Listing</h4>
+                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
                     <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <i class="fa-light fa-xmark"></i>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label">Package</label>
-                            <select class="cmn-select2" name="state">
-                                <option value="AL">Select</option>
-                                <option value="AL">Gold</option>
-                                <option value="WY">Premium</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <label for="firstname" class="form-label">No. of available listing</label>
-                            <input type="text" class="form-control" value="7" id="firstname" readonly>
-                        </div>
-
-                    </div>
-
-
+                    Modal body
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="cmn-btn3" data-bs-dismiss="modal">Close</button>
-                    <a href="add-listing.html" class="cmn-btn">create</a>
+                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
 
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal section end -->
+
+
+
+
+
 
 
 
@@ -743,7 +678,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- select2_Js_link -->
     <script src="assets/js/select2.min.js"></script>
-    <!-- Owl carousel Js link -->
+    <!-- select2_Js_link -->
     <script src="assets/js/owl.carousel.min.js"></script>
 
 
