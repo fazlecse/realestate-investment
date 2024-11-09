@@ -1355,6 +1355,7 @@ Cmn btn start
     justify-content: center;
     font-weight: 500;
     text-transform: capitalize;
+    gap: 5px;
 
     &:hover {
         color: rgb(var(--white));
@@ -1826,7 +1827,8 @@ hr.divider:after {
             background-color: rgb(var(--primary-color), 0.1);
             color: rgb(var(--heading-color));
         }
-        i{
+
+        i {
             color: rgb(var(--primary-color));
         }
     }
@@ -2057,12 +2059,6 @@ Cmn table start
         margin-right: 20px;
     }
 
-}
-
-@media (max-width: 575px) {
-    .cmn-btn {
-        padding: 7px;
-    }
 }
 
 // Responsive table section end
@@ -2305,6 +2301,7 @@ Chat section start
         margin-left: 0;
     }
 }
+
 .chat-conversation-btn {
     height: 40px;
     width: 40px;
@@ -2325,6 +2322,7 @@ Chat section start
         background: rgb(var(--white));
     }
 }
+
 .message-container {
     box-shadow: var(--shadow1);
     border: 1px solid var(--border-color1);
@@ -2408,14 +2406,33 @@ Chat section start
                 }
             }
 
-            .message-text {
-                padding: 5px 10px;
-                border-radius: 15px;
-                border-top-left-radius: 0;
-                background: rgb(var(--primary-color));
-                color: rgb(var(--white));
+            .message-text-box {
                 max-width: 85%;
+
+                .message-text {
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    border-top-left-radius: 0;
+                    background: rgb(var(--primary-color));
+                    color: rgb(var(--white));
+
+                }
+
+                .attach-file-box {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    margin-top: 6px;
+                }
+
+                .time {
+                    margin-bottom: 0;
+                    margin-top: 2px;
+                    font-size: 12px;
+                }
             }
+
+
         }
 
         .message-bubble-right {
@@ -2426,11 +2443,21 @@ Chat section start
                 margin-left: 10px;
             }
 
-            .message-text {
-                border-top-left-radius: 15px;
-                border-top-right-radius: 0;
-                background: var(--bg-color1);
-                color: rgb(var(--heading-color));
+            .message-text-box {
+                .message-text {
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 0;
+                    background: var(--bg-color1);
+                    color: rgb(var(--heading-color));
+                }
+
+                .attach-file-box {
+                    justify-content: end;
+                }
+
+                .time {
+                    text-align: right;
+                }
             }
 
         }
@@ -2809,6 +2836,40 @@ Chat section end
 }
 
 // Callout end
+// Attach file start
+.attach-file {
+    position: relative;
+
+    .prev {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 110px;
+        background: rgb(var(--primary-color));
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-align: center;
+        color: rgb(var(--white));
+        text-transform: capitalize;
+        font-weight: 500;
+        padding: 10px;
+    }
+}
+// Rtl attach file start
+.rtl{
+    .attach-file .prev{
+        left: auto;
+        right: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+// Rtl attach file end
+// Attach file end
 /*----------------------------------------------
 Reusable style section end
 ----------------------------------------------*/
@@ -3092,10 +3153,7 @@ Padding bottom
         justify-content: center;
         color: rgb(var(--primary-color));
         font-size: 24px;
-
     }
-
-
 }
 
 .card-item:nth-child(even) {
@@ -3109,10 +3167,27 @@ Padding bottom
     }
 }
 
+// Rtl box card section start
+.rtl {
+    .box-card {
+        background: linear-gradient(to left, rgb(var(--primary-color), 0.08) 20%, rgba(204, 84, 244, 0) 50%), #ffffff;
+        border-left: none;
+        border-right: 2px solid rgb(var(--primary-color));
+    }
 
+    .card-item:nth-child(even) {
+        .box-card {
+            border-left: none;
+            border-right: 2px solid rgb(var(--soft-magenta));
+            background: linear-gradient(to left, rgb(var(--soft-magenta), 0.08) 20%, rgba(204, 84, 244, 0) 50%), #ffffff;
+        }
+    }
+}
+
+// Rtl box card section end
 /* Box Card section end*/
-// Box card2 section start
 
+// Box card2 section start
 .deposit-invest-box {
     border-radius: 25px;
     height: 100%;
@@ -4894,7 +4969,7 @@ Map section end
         position: relative;
         overflow: hidden;
         border-top-left-radius: 20px;
-        border-top-right-radius: 20px;  
+        border-top-right-radius: 20px;
 
         img {
             height: 250px;
@@ -5016,7 +5091,8 @@ Map section end
     .cmn-btn2 {
         padding: 6px 20px;
     }
-    .single-btn{
+
+    .single-btn {
         border-radius: 50%;
         height: 35px;
         width: 35px;
@@ -5055,11 +5131,11 @@ Map section end
 /*----------------------------------------------
 Property section end
 ----------------------------------------------*/
+
 .ranking-box {
     padding: 15px;
     border-radius: 25px;
     border: 1px solid var(--border-color1);
-    background: linear-gradient(to right, rgb(var(--soft-magenta), 0.08) 20%, rgba(204, 84, 244, 0) 50%), white;
     background: linear-gradient(to right, rgba(72, 143, 249, 0.08) 20%, rgba(204, 84, 244, 0) 50%), white;
     position: relative;
     height: 100%;
@@ -5122,6 +5198,16 @@ Property section end
     }
 }
 
+.rtl {
+    .ranking-box {
+        background: linear-gradient(to left, rgba(72, 143, 249, 0.08) 20%, rgba(204, 84, 244, 0) 50%), white;
+        .lock-icon {
+            right: auto;
+            left: 20px;
+        }
+    }
+}
+
 .client-question-box {
     background-color: var(--bg-color1);
     padding: 10px;
@@ -5158,30 +5244,34 @@ Property section end
     gap: 15px;
 
     .img-box {
-       width: 150px;
-       height: 110px;
-       img{
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        object-fit: cover;
-       }
+        width: 150px;
+        height: 110px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+        }
     }
 
 }
-.owner-box{
+
+.owner-box {
     display: flex;
     align-items: center;
     gap: 10px;
-    .img-box{
-        img{
+
+    .img-box {
+        img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
         }
     }
 }
-.contact-owner-btn{
+
+.contact-owner-btn {
     background-color: rgb(var(--primary-color), 0.1);
     padding: 4px 7px;
     font-weight: 600;

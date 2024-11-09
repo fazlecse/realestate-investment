@@ -1185,6 +1185,7 @@ Cmn btn start
   justify-content: center;
   font-weight: 500;
   text-transform: capitalize;
+  gap: 5px;
 }
 .delete-btn:hover {
   color: rgb(var(--white));
@@ -1763,11 +1764,6 @@ Cmn table start
     margin-right: 20px;
   }
 }
-@media (max-width: 575px) {
-  .cmn-btn {
-    padding: 7px;
-  }
-}
 .rtl .cmn-table .table thead tr th:first-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -2028,13 +2024,26 @@ Chat section start
   width: 30px;
   height: 30px;
 }
-.message-container .chat-box .message-bubble .message-text {
+.message-container .chat-box .message-bubble .message-text-box {
+  max-width: 85%;
+}
+.message-container .chat-box .message-bubble .message-text-box .message-text {
   padding: 5px 10px;
   border-radius: 15px;
   border-top-left-radius: 0;
   background: rgb(var(--primary-color));
   color: rgb(var(--white));
-  max-width: 85%;
+}
+.message-container .chat-box .message-bubble .message-text-box .attach-file-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+}
+.message-container .chat-box .message-bubble .message-text-box .time {
+  margin-bottom: 0;
+  margin-top: 2px;
+  font-size: 12px;
 }
 .message-container .chat-box .message-bubble-right {
   flex-direction: row-reverse;
@@ -2043,11 +2052,17 @@ Chat section start
   margin-right: 0;
   margin-left: 10px;
 }
-.message-container .chat-box .message-bubble-right .message-text {
+.message-container .chat-box .message-bubble-right .message-text-box .message-text {
   border-top-left-radius: 15px;
   border-top-right-radius: 0;
   background: var(--bg-color1);
   color: rgb(var(--heading-color));
+}
+.message-container .chat-box .message-bubble-right .message-text-box .attach-file-box {
+  justify-content: end;
+}
+.message-container .chat-box .message-bubble-right .message-text-box .time {
+  text-align: right;
 }
 .message-container .chat-box .chat-box-bottom {
   display: flex;
@@ -2324,6 +2339,35 @@ Chat section end
 .rtl .callout {
   border-left: none;
   border-right: 4px solid rgb(var(--primary-color));
+}
+
+.attach-file {
+  position: relative;
+}
+.attach-file .prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 110px;
+  background: rgb(var(--primary-color));
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  color: rgb(var(--white));
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.rtl .attach-file .prev {
+  left: auto;
+  right: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /*----------------------------------------------
@@ -2615,6 +2659,17 @@ Padding bottom
 }
 .card-item:nth-child(even) .box-card .icon-box {
   color: rgb(var(--soft-magenta));
+}
+
+.rtl .box-card {
+  background: linear-gradient(to left, rgb(var(--primary-color), 0.08) 20%, rgba(204, 84, 244, 0) 50%), #ffffff;
+  border-left: none;
+  border-right: 2px solid rgb(var(--primary-color));
+}
+.rtl .card-item:nth-child(even) .box-card {
+  border-left: none;
+  border-right: 2px solid rgb(var(--soft-magenta));
+  background: linear-gradient(to left, rgb(var(--soft-magenta), 0.08) 20%, rgba(204, 84, 244, 0) 50%), #ffffff;
 }
 
 /* Box Card section end*/
@@ -4129,7 +4184,6 @@ Property section end
   padding: 15px;
   border-radius: 25px;
   border: 1px solid var(--border-color1);
-  background: linear-gradient(to right, rgb(var(--soft-magenta), 0.08) 20%, rgba(204, 84, 244, 0) 50%), white;
   background: linear-gradient(to right, rgba(72, 143, 249, 0.08) 20%, rgba(204, 84, 244, 0) 50%), white;
   position: relative;
   height: 100%;
@@ -4180,6 +4234,14 @@ Property section end
   right: 20px;
   font-size: 20px;
   z-index: 1;
+}
+
+.rtl .ranking-box {
+  background: linear-gradient(to left, rgba(72, 143, 249, 0.08) 20%, rgba(204, 84, 244, 0) 50%), white;
+}
+.rtl .ranking-box .lock-icon {
+  right: auto;
+  left: 20px;
 }
 
 .client-question-box {
